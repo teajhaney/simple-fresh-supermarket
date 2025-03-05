@@ -1,15 +1,29 @@
 import React from "react";
-import { useState } from "react";
-
+import { useState, useEffect,useRef } from "react";
 
 const OptionMenu = ({ navItem, navSubItems }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef(null);
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
 
+    if (isOpen) {
+      window.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      window.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isOpen]);
   return (
     <>
       {/* Select Box */}
       <div
-        className="relative  gap-3 items-center  p-3 rounded-md  cursor-pointer"
+        className="relative  gap-3 items-center  p-3 rounded-md  cursor-pointer"ref={dropdownRef}
         onClick={() => setIsOpen(!isOpen)}>
         <span>{navItem}</span>
       </div>
