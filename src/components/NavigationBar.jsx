@@ -8,7 +8,7 @@ const NavigationBar = () => {
         <div className="flex items-center gap-2 text-4xl">
           <IoMdMenu />
                   <GiShoppingCart className="text-primary" />
-                  <h1 className="text-2xl">simple</h1>
+                  <h1 className="text-2xl ">SimpleCart</h1>
         </div>
       </div>
       <div className="bodyContent hidden lg:flex "></div>
