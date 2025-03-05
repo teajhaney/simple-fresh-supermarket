@@ -9,6 +9,7 @@ const OptionMenu = ({ navItem, navSubItems }) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
         setIsOpen(false);
       }
+        
     };
 
     if (isOpen) {
