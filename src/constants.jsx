@@ -225,8 +225,13 @@ export const fruitsVegetables =
 export const freshlyBakedBuns =
   "https://freshcart77.myshopify.com/cdn/shop/files/grocery-banner-2.jpg?v=1695970709&amp;width=424";
 
+// Define menu options with paths
+export const accounts = [
+  { title: "Sign In", path: "/sign-in" },
+  { title: "Sign Up", path: "/sign-up" },
+];
+
 export const shops = [
-  'Shop',
-  'Cart'
-]
-export const accounts = ["Sign in", "Sign up"];
+  { title: "Products", path: "/products-page" },
+  { title: "Cart", path: "/cart" },
+];

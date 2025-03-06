@@ -9,10 +9,10 @@ const HomePage = () => {
  
   return (
     <>
-      <Announcement />
-      <NavigationBar />
-
-      <SideBarNav />
+      {/* <Announcement /> */}
+      {/* <NavigationBar /> */}
+     
+      {/* <SideBarNav /> */}
     </>
   );
 };

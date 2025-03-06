@@ -7,13 +7,13 @@ import { useEffect } from "react";
 import { accounts, featuredCategories, shops } from "../constants";
 import { CgMenuGridR } from "react-icons/cg";
 import { OptionMenu } from "./export_components";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useStateContext } from "../contexts/useStateContext";
 
 //code
 const NavigationBar = () => {
   const { setActiveSideBarNav, activeSideBarNav } = useStateContext();
-
+  const { activeCartSideBar, setActiveCartSideBar } = useStateContext();
   const [isDepartmentOpen, setIsDepartmentOpen] = useState(false);
   const [departmentSelected, setDepartmentSelected] =
     useState("All Departments");
@@ -70,12 +70,28 @@ const NavigationBar = () => {
         </div>
         <div className="flex items-center gap-2 text-2xl">
           <CiSearch className="hidden lg:flex" />
-          <CiUser />
-          <CiShoppingCart />
+          <NavLink
+            to="/sign-in"
+            className={({ isActive }) =>
+              isActive ? "text-primary font-bold" : ""
+            }>
+            <CiUser />
+          </NavLink>
+          {activeCartSideBar ? (
+            <CiShoppingCart
+              className=" cursor-pointer"
+              onClick=''
+            />
+          ) : (
+            <CiShoppingCart
+              className=" cursor-pointer"
+              onClick={() => setActiveCartSideBar((prevState) => !prevState)}
+            />
+          )}
         </div>
       </div>
       {/* Navbar */}
-      <div className="bodyContent hidden lg:flex gap-8 items-center ">
+      <div className="bodyContent hidden lg:flex gap-8 items-center text-secondary">
         {/* departments */}
         <div className="relative w-52 h-10" ref={departmentRef}>
           {/* Select Box */}
@@ -89,15 +105,16 @@ const NavigationBar = () => {
           {isDepartmentOpen && (
             <ul className="absolute w-full bg-white  border-2 border-accents  rounded-md my-2 shadow-md z-10">
               {featuredCategories.map((featuredCategory, index) => (
-                <li
-                  key={index}
-                  className="p-1 hover:bg-accents text-sm text-tertiary rounded-md mx-3 my-2 cursor-pointer transition"
-                  onClick={() => {
-                    setDepartmentSelected(featuredCategory.title);
-                    setIsDepartmentOpen(false);
-                  }}>
-                  {featuredCategory.title}
-                </li>
+                <NavLink key={index} to="/products-page">
+                  <li
+                    className="p-1 hover:bg-accents text-sm text-tertiary rounded-md mx-3 my-2 cursor-pointer transition"
+                    onClick={() => {
+                      setDepartmentSelected(featuredCategory.title);
+                      setIsDepartmentOpen(false);
+                    }}>
+                    {featuredCategory.title}
+                  </li>
+                </NavLink>
               ))}
             </ul>
           )}
@@ -105,16 +122,30 @@ const NavigationBar = () => {
         {/* Nav items */}
         <div>
           <ul className=" flex gap-10 items-center cursor-pointer">
-            <Link to="/">Home</Link>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive ? "text-primary font-bold" : ""
+              }>
+              Home
+            </NavLink>
             {/* shop */}
             <li>
-              <OptionMenu navItem={"Shop"} navSubItems={shops} />
+              <OptionMenu navItem={"Products"} navDropDownItems={shops} />
             </li>
             <li>
               {" "}
-              <OptionMenu navItem={"Account"} navSubItems={accounts} />
+              <OptionMenu navItem={"Account"} navDropDownItems={accounts} />
             </li>
-            <NavLink to="/Blog">Blog</NavLink>
+            <li>
+              <NavLink
+                to="/blog"
+                className={({ isActive }) =>
+                  isActive ? "text-primary font-bold" : ""
+                }>
+                Blog
+              </NavLink>
+            </li>
           </ul>
         </div>
       </div>
