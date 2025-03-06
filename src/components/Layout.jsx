@@ -12,8 +12,9 @@ const Layout = () => (
   <div className="relative">
     <Announcement />
     <NavigationBar />
+    <CartSideBar />
     <SideBarNav />
-    <CartSideBar/>
+
     <Outlet />
     <Footer />
   </div>

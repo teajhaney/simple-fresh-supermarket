@@ -47,7 +47,10 @@ const NavigationBar = () => {
             {activeSideBarNav ? (
               <RxCross2
                 className="lg:hidden cursor-pointer"
-                onClick={() => setActiveSideBarNav((prevState) => !prevState)}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setActiveSideBarNav((prevState) => !prevState);
+                }}
               />
             ) : (
               <IoMdMenu
@@ -78,14 +81,14 @@ const NavigationBar = () => {
             <CiUser />
           </NavLink>
           {activeCartSideBar ? (
-            <CiShoppingCart
-              className=" cursor-pointer"
-              onClick=''
-            />
+            <CiShoppingCart className=" cursor-pointer" onClick="" />
           ) : (
             <CiShoppingCart
               className=" cursor-pointer"
-              onClick={() => setActiveCartSideBar((prevState) => !prevState)}
+              onClick={(e) => {
+                e.stopPropagation();
+                setActiveCartSideBar((prevState) => !prevState);
+              }}
             />
           )}
         </div>

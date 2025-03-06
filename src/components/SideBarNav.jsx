@@ -8,9 +8,14 @@ import { GiShoppingCart } from "react-icons/gi";
 const SideBarNav = () => {
   const { activeSideBarNav, setActiveSideBarNav } = useStateContext();
   const sideBarRef = useRef(null);
+    const cartRef = useRef(null);
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (sideBarRef.current && !sideBarRef.current.contains(event.target)) {
+      if (
+        sideBarRef.current &&
+        !sideBarRef.current.contains(event.target) &&
+        !cartRef.current.contains(event.target)
+      ) {
         setActiveSideBarNav(false);
       }
     };

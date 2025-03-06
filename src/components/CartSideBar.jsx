@@ -5,12 +5,17 @@ import { RxCross2 } from "react-icons/rx";
 
 const CartSideBar = () => {
   const { activeCartSideBar, setActiveCartSideBar } = useStateContext();
-  const cartRef = useRef(null);
+    const cartRef = useRef(null);
+    const sideBarRef=useRef(null);
 
   useEffect(() => {
     console.log("CartSideBar activeCartSideBar:", activeCartSideBar); // Debug
     const handleClickOutside = (event) => {
-      if (cartRef.current && !cartRef.current.contains(event.target)) {
+      if (
+        cartRef.current &&
+        !cartRef.current.contains(event.target) &&
+        !sideBarRef.current.contains(event.target)
+      ) {
         setActiveCartSideBar(false);
       }
     };
