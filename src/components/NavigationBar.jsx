@@ -1,37 +1,60 @@
-import React from "react";
+import { useState, useRef } from "react";
 import { GiShoppingCart } from "react-icons/gi";
 import { IoMdMenu } from "react-icons/io";
+import { RxCross2 } from "react-icons/rx";
 import { CiSearch, CiShoppingCart, CiUser } from "react-icons/ci";
-import { useState, useRef, useEffect } from "react";
+import { useEffect } from "react";
 import { accounts, featuredCategories, shops } from "../constants";
 import { CgMenuGridR } from "react-icons/cg";
 import { OptionMenu } from "./export_components";
+import { Link, NavLink } from "react-router-dom";
+import { useStateContext } from "../contexts/useStateContext";
+
+//code
 const NavigationBar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [selected, setSelected] = useState("All Deprtments");
-  const dropdownRef = useRef(null);
-useEffect(() => {
-  const handleClickOutside = (event) => {
-    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-      setIsOpen(false);
+  const { setActiveSideBarNav, activeSideBarNav } = useStateContext();
+
+  const [isDepartmentOpen, setIsDepartmentOpen] = useState(false);
+  const [departmentSelected, setDepartmentSelected] =
+    useState("All Departments");
+  const departmentRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        departmentRef.current &&
+        !departmentRef.current.contains(event.target)
+      ) {
+        setIsDepartmentOpen(false);
+      }
+    };
+
+    if (isDepartmentOpen) {
+      window.addEventListener("mousedown", handleClickOutside);
     }
-  };
 
-  if (isOpen) {
-    window.addEventListener("mousedown", handleClickOutside);
-  }
+    return () => {
+      window.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isDepartmentOpen]);
 
-  return () => {
-    window.removeEventListener("mousedown", handleClickOutside);
-  };
-}, [isOpen]);
   return (
-    <div className=" flex flex-col gap-3 lg:pb-10  border-b-2 border-b-accents">
+    <div className=" flex flex-col gap-3 lg:pb-5  border-b-2 border-b-accents">
       <div className="bodyContent h-16 flex justify-between items-center">
         <div className="flex items-center gap-16 text-4xl">
           {/* Logo */}
           <div className="flex items-center gap-2 text-4xl">
-            <IoMdMenu className="lg:hidden" />
+            {activeSideBarNav ? (
+              <RxCross2
+                className="lg:hidden cursor-pointer"
+                onClick={() => setActiveSideBarNav((prevState) => !prevState)}
+              />
+            ) : (
+              <IoMdMenu
+                className="lg:hidden cursor-pointer"
+                onClick={() => setActiveSideBarNav((prevState) => !prevState)}
+              />
+            )}
             <GiShoppingCart className="text-primary" />
             <h1 className="text-2xl font-bold">SimpleCart</h1>
           </div>
@@ -40,7 +63,7 @@ useEffect(() => {
             type="search"
             name="search"
             id="search"
-            className="w-200  h-10 hidden lg:flex rounded-sm border-2 text-secondary  px-3 text-lg border-accents"
+            className="w-200  h-10 hidden lg:flex rounded-sm border-2 text-secondary outline-primary px-3 text-lg    border-accents"
             placeholder="Search"
           />
           {/* right icons */}
@@ -54,24 +77,24 @@ useEffect(() => {
       {/* Navbar */}
       <div className="bodyContent hidden lg:flex gap-8 items-center ">
         {/* departments */}
-        <div className="relative w-52 h-10" ref={dropdownRef}>
+        <div className="relative w-52 h-10" ref={departmentRef}>
           {/* Select Box */}
           <div
             className="  flex justify-center text-white gap-3 items-center bg-primary  p-3 rounded-md  cursor-pointer"
-            onClick={() => setIsOpen(!isOpen)}>
+            onClick={() => setIsDepartmentOpen(!isDepartmentOpen)}>
             <CgMenuGridR className="" />
-            <span>{selected}</span>
+            <span>{departmentSelected}</span>
           </div>
           {/* Dropdown Options */}
-          {isOpen && (
+          {isDepartmentOpen && (
             <ul className="absolute w-full bg-white  border-2 border-accents  rounded-md my-2 shadow-md z-10">
               {featuredCategories.map((featuredCategory, index) => (
                 <li
                   key={index}
                   className="p-1 hover:bg-accents text-sm text-tertiary rounded-md mx-3 my-2 cursor-pointer transition"
                   onClick={() => {
-                    setSelected(featuredCategory.title);
-                    setIsOpen(false);
+                    setDepartmentSelected(featuredCategory.title);
+                    setIsDepartmentOpen(false);
                   }}>
                   {featuredCategory.title}
                 </li>
@@ -82,7 +105,7 @@ useEffect(() => {
         {/* Nav items */}
         <div>
           <ul className=" flex gap-10 items-center cursor-pointer">
-            <li>Home</li>
+            <Link to="/">Home</Link>
             {/* shop */}
             <li>
               <OptionMenu navItem={"Shop"} navSubItems={shops} />
@@ -91,7 +114,7 @@ useEffect(() => {
               {" "}
               <OptionMenu navItem={"Account"} navSubItems={accounts} />
             </li>
-            <li>Blog</li>
+            <NavLink to="/Blog">Blog</NavLink>
           </ul>
         </div>
       </div>
