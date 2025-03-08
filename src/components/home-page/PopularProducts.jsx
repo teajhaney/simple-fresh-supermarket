@@ -25,11 +25,11 @@ const PopularProducts = () => {
         ref={scrollRef}
         className="flex gap-2 overflow-hidden scroll-smooth no-scrollbar lg:grid lg:grid-cols-5">
         {gorceryProducts
-          .filter((product) => product.popular === true)
+          .filter((product) => product.popular)
           .map((gorceryProduct, index) => (
             <div
               key={index}
-              className=" h-150 w-100 lg:h-96 lg:w-full flex-shrink-0 bg-white  flex flex-col gap-2  p-4 rounded-lg  border border-accents hover:border-primary transition-all duration-500 ease-in-out">
+              className=" h-auto w-100  lg:w-full flex-shrink-0 bg-white  flex flex-col gap-2  p-4 rounded-lg  border border-accents hover:border-primary transition-all duration-500 ease-in-out">
               <img
                 src={gorceryProduct.productImage}
                 alt={gorceryProduct.productName}
@@ -43,7 +43,7 @@ const PopularProducts = () => {
                   <FaStar
                     key={i}
                     className={
-                      i < gorceryProduct.productRatngs
+                      i < gorceryProduct.productRatings
                         ? "text-[#FFC007]"
                         : "text-gray-300"
                     }
