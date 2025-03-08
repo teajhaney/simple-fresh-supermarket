@@ -28,7 +28,8 @@ const Infos = () => {
             <div className="text-5xl text-primary">{moreInfo.icon}</div>
             <h2 className="font-semibold">{moreInfo.heading}</h2>
             <h2 className=" lg:text-sm text-tertiary/10">
-              {moreInfo.description} <span className="text-primary">policy.</span>
+              {moreInfo.description}{" "}
+              <span className="text-primary">policy.</span>
             </h2>
           </div>
         ))}
@@ -36,7 +37,9 @@ const Infos = () => {
 
       <div className="flex lg:hidden justify-center gap-5 mt-3">
         <IoIosArrowBack
-          className="text-secondary text-xl font-extralight cursor-pointer"
+          className={`text-xl font-extralight cursor-pointer ${
+            currentIndex === 1 ? "text-gray-300" : "text-secondary"
+          }`}
           onClick={() => {
             if (currentIndex > 1) {
               setCurrentIndex((prev) => prev - 1);
@@ -48,7 +51,11 @@ const Infos = () => {
           {currentIndex}/{moreInfos.length}
         </h1>
         <IoIosArrowForward
-          className="text-secondary text-xl font-extralight cursor-pointer"
+          className={`text-xl font-extralight cursor-pointer ${
+            currentIndex === moreInfos.length
+              ? "text-gray-300"
+              : "text-secondary"
+          }`}
           onClick={() => {
             if (currentIndex < moreInfos.length) {
               setCurrentIndex((prev) => prev + 1);
