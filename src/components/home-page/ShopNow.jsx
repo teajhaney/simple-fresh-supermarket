@@ -17,7 +17,7 @@ const ShopNow = () => {
             <h1 className="text-xl md:text-5xl font-bold">
               SuperMarket For Fresh Grocery
             </h1>
-            <h1 className="text-tertiary opacity-50 text-[14px] md:text-xl font-semibold">
+            <h1 className="text-tertiary opacity-50 text-[12px] md:text-xl font-semibold">
               Introduced a new model for online grocery shopping and convinient
               home delivery
             </h1>

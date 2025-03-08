@@ -4,7 +4,7 @@ import { IoMdMenu } from "react-icons/io";
 import { RxCross2 } from "react-icons/rx";
 import { CiSearch, CiShoppingCart, CiUser } from "react-icons/ci";
 import { useEffect } from "react";
-import { accounts, featuredCategories, shops } from "../constants";
+import { accounts, categories, shops } from "../constants";
 import { CgMenuGridR } from "react-icons/cg";
 import { OptionMenu } from "./export_components";
 import { NavLink } from "react-router-dom";
@@ -107,15 +107,15 @@ const NavigationBar = () => {
           {/* Dropdown Options */}
           {isDepartmentOpen && (
             <ul className="absolute w-full bg-white  border-2 border-accents  rounded-md my-2 shadow-md z-10">
-              {featuredCategories.map((featuredCategory, index) => (
+              {categories.map((category, index) => (
                 <NavLink key={index} to="/products-page">
                   <li
                     className="p-1 hover:bg-accents text-sm text-tertiary rounded-md mx-3 my-2 cursor-pointer transition"
                     onClick={() => {
-                      setDepartmentSelected(featuredCategory.title);
+                      setDepartmentSelected(category.title);
                       setIsDepartmentOpen(false);
                     }}>
-                    {featuredCategory.title}
+                    {category.title}
                   </li>
                 </NavLink>
               ))}

@@ -8,5 +8,8 @@ export { default as CartSideBar } from "./CartSideBar.jsx";
 export { default as ButtonComponent } from "./ButtonComponent.jsx";
 export { default as ShopNow } from "./home-page/ShopNow.jsx";
 export { default as FeaturedCategories } from "./home-page/FeaturedCategories.jsx";
+export { default as DiscountsComponent } from "./home-page/DiscountsComponent.jsx";
+export { default as PopularProducts } from "./home-page/PopularProducts.jsx";
+export { default as DailyBestSells } from "./home-page/DailyBestSells.jsx";
 
 ;

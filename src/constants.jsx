@@ -1,6 +1,7 @@
 export const gorceryProducts = [
   {
     productName: "Golden Pineapple",
+    popular:true,
     productRatngs: 4,
     numbersOfRatings: 23,
     productPrice: 15.0,
@@ -11,6 +12,7 @@ export const gorceryProducts = [
   },
   {
     productName: "Cadbury 5 Star Chocolate",
+    popular:false,
     productRatngs: 5,
     numbersOfRatings: 23,
     productPrice: 12.0,
@@ -21,6 +23,7 @@ export const gorceryProducts = [
   },
   {
     productName: "Beetroot",
+    popular:true,
     productRatngs: 3,
     numbersOfRatings: 23,
     productPrice: 18.0,
@@ -31,6 +34,7 @@ export const gorceryProducts = [
   },
   {
     productName: "Onion Flavour Potato",
+    popular:true,
     productRatngs: 3,
     numbersOfRatings: 23,
     productPrice: 18.0,
@@ -41,6 +45,7 @@ export const gorceryProducts = [
   },
   {
     productName: "Salted Instant Popcorn",
+    popular:true,
     productRatngs: 4,
     numbersOfRatings: 23,
     productPrice: 4.0,
@@ -51,6 +56,7 @@ export const gorceryProducts = [
   },
   {
     productName: "NutriChoice Digestive",
+    popular:true,
     productRatngs: 3,
     numbersOfRatings: 103,
     productPrice: 10.0,
@@ -61,6 +67,7 @@ export const gorceryProducts = [
   },
   {
     productName: "Napolitanke Ljesnjak",
+    popular:false,
     productRatngs: 4,
     numbersOfRatings: 13,
     productPrice: 20.0,
@@ -71,6 +78,7 @@ export const gorceryProducts = [
   },
   {
     productName: "Fresh Kiwi",
+    popular:true,
     productRatngs: 5,
     numbersOfRatings: 21,
     productPrice: 14.0,
@@ -81,6 +89,7 @@ export const gorceryProducts = [
   },
   {
     productName: "Slurrp Millet Chocolate",
+    popular:true,
     productRatngs: 4,
     numbersOfRatings: 23,
     productPrice: 5.0,
@@ -90,6 +99,7 @@ export const gorceryProducts = [
   },
   {
     productName: "Roast ground Coffee",
+    popular:true,
     productRatngs: 4,
     numbersOfRatings: 500,
     productPrice: 12.0,
@@ -99,6 +109,7 @@ export const gorceryProducts = [
   },
   {
     productName: "Kellogg's Original Cereals",
+    popular:false,
     productRatngs: 3,
     numbersOfRatings: 20,
     productPrice: 6.0,
@@ -113,6 +124,7 @@ export const gorceryProducts = [
   },
   {
     productName: "Crushed Tomatoes",
+    popular:true,
     productRatngs: 4.5,
     numbersOfRatings: 203,
     productPrice: 8.0,
@@ -123,6 +135,7 @@ export const gorceryProducts = [
   },
   {
     productName: "Haldiram's Sev Bhujia",
+    popular:true,
     productRatngs: 3,
     numbersOfRatings: 23,
     productPrice: 17.0,
@@ -133,6 +146,7 @@ export const gorceryProducts = [
   },
   {
     productName: "Fresh Banana",
+    popular:false,
     productRatngs: 5,
     numbersOfRatings: 300,
     productPrice: 150.0,
@@ -143,6 +157,7 @@ export const gorceryProducts = [
   },
   {
     productName: "Britannia Cheese Slices",
+    popular:false,
     productRatngs: 4,
     numbersOfRatings: 23,
     productPrice: 18.0,
@@ -157,6 +172,7 @@ export const gorceryProducts = [
   },
   {
     productName: "Blueberry Yogurt",
+    popular:false,
     productRatngs: 5,
     numbersOfRatings: 34,
     productPrice: 20.0,
@@ -167,6 +183,7 @@ export const gorceryProducts = [
   },
   {
     productName: "Fresh Apple",
+    popular:true,
     productRatngs: 5,
     numbersOfRatings: 100,
     productPrice: 250.0,
@@ -177,6 +194,7 @@ export const gorceryProducts = [
   },
   {
     productName: "Amul Butter - 500g",
+    popular:false,
     productRatngs: 4,
     numbersOfRatings: 30,
     productPrice: 50.0,
@@ -187,7 +205,7 @@ export const gorceryProducts = [
   },
 ];
 
-export const featuredCategories = [
+export const categories = [
   {
     title: "Dairy, Bread & Eggs",
     categoryImage:
@@ -219,11 +237,20 @@ export const featuredCategories = [
       "https://freshcart77.myshopify.com/cdn/shop/collections/category-atta-rice-dal.jpg?v=1723008637&width=120",
   },
 ];
-
-export const fruitsVegetables =
-  "https://freshcart77.myshopify.com/cdn/shop/files/grocery-banner.png?v=1695970709&amp;width=424";
-export const freshlyBakedBuns =
-  "https://freshcart77.myshopify.com/cdn/shop/files/grocery-banner-2.jpg?v=1695970709&amp;width=424";
+export const discounts = [
+  {
+    title: "Fruits & Vegetables",
+    discount: "Get Upto 30% off",
+    image:
+      "https://freshcart77.myshopify.com/cdn/shop/files/grocery-banner.png?v=1695970709&amp;width=424",
+  },
+  {
+    title: "Freshly Baked Buns",
+    discount: "Get Upto 25% off",
+    image:
+      "https://freshcart77.myshopify.com/cdn/shop/files/grocery-banner-2.jpg?v=1695970709&amp;width=424",
+  },
+];
 
 // Define menu options with paths
 export const accounts = [
@@ -236,4 +263,5 @@ export const shops = [
   { title: "Cart", path: "/cart" },
 ];
 
-export const shopNowBg = "https://freshcart77.myshopify.com/cdn/shop/files/slide-1.jpg?v=1694525326";
+export const shopNowBg =
+  "https://freshcart77.myshopify.com/cdn/shop/files/slide-1.jpg?v=1694525326";

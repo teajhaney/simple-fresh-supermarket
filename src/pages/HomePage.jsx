@@ -6,10 +6,14 @@ import {
   ButtonComponent,
   ShopNow,
   FeaturedCategories,
+  DiscountsComponent,
+  PopularProducts,
+  DailyBestSells,
 } from "../components/export_components";
 
 
 import { NavLink } from "react-router-dom";
+
 
 const HomePage = () => {
   return (
@@ -18,7 +22,10 @@ const HomePage = () => {
       {/* <NavigationBar /> */}
       {/* <SideBarNav /> */}
       <ShopNow />
-      <FeaturedCategories/>
+      <FeaturedCategories />
+      <DiscountsComponent />
+      <PopularProducts />
+      <DailyBestSells />
     </section>
   );
 };
