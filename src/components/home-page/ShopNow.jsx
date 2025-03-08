@@ -8,7 +8,7 @@ const ShopNow = () => {
       {" "}
       <NavLink to={"/products-page"}>
         <section
-          className="bg-cover bg-center h-80 md:h-120  rounded-lg flex flex-col justify-center gap-4 px-3 md:px-16 cursor-pointer"
+          className="bg-cover bg-center h-80 md:h-120  rounded-lg flex flex-col justify-center gap-4 px-3 md:px-16 cursor-pointer transition-all duration-500 ease-in-out"
           style={{ backgroundImage: `url(${shopNowBg})` }}>
           <div className="w-96 md:w-100 flex flex-col justify-center gap-4">
             <h1 className="text-[10px] text-secondary font-bold bg-[#FFC007] rounded-sm py-0.5 px-1 w-fit">

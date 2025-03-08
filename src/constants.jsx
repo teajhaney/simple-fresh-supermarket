@@ -4,7 +4,7 @@ export const gorceryProducts = [
     popular:true,
     productRatngs: 4,
     numbersOfRatings: 23,
-    productPrice: 15.0,
+    productPrice: 15.00,
     productInStock: true,
     productImage:
       "https://freshcart77.myshopify.com/cdn/shop/files/pinapple.jpg?v=1724400043&width=360",
@@ -15,7 +15,7 @@ export const gorceryProducts = [
     popular:false,
     productRatngs: 5,
     numbersOfRatings: 23,
-    productPrice: 12.0,
+    productPrice: 12.00,
     productInStock: false,
     productImage:
       "https://freshcart77.myshopify.com/cdn/shop/files/product-img-3-1.jpg?v=1723016052&width=720",
@@ -26,7 +26,7 @@ export const gorceryProducts = [
     popular:true,
     productRatngs: 3,
     numbersOfRatings: 23,
-    productPrice: 18.0,
+    productPrice: 18.00,
     productInStock: true,
     productImage:
       "https://freshcart77.myshopify.com/cdn/shop/files/product-img-19.jpg?v=1723016074&width=720",
@@ -37,7 +37,7 @@ export const gorceryProducts = [
     popular:true,
     productRatngs: 3,
     numbersOfRatings: 23,
-    productPrice: 18.0,
+    productPrice: 18.00,
     productInStock: true,
     productImage:
       "https://freshcart77.myshopify.com/cdn/shop/files/product-img-4-1.jpg?v=1723016049&width=720",
@@ -48,7 +48,7 @@ export const gorceryProducts = [
     popular:true,
     productRatngs: 4,
     numbersOfRatings: 23,
-    productPrice: 4.0,
+    productPrice: 4.00,
     productInStock: false,
     productImage:
       "https://freshcart77.myshopify.com/cdn/shop/files/product-img-5-1.jpg?v=1723016045&width=720",
@@ -59,7 +59,7 @@ export const gorceryProducts = [
     popular:true,
     productRatngs: 3,
     numbersOfRatings: 103,
-    productPrice: 10.0,
+    productPrice: 10.00,
     productInStock: true,
     productImage:
       "https://freshcart77.myshopify.com/cdn/shop/files/product-img-2-1.jpg?v=1723016055&width=720",
@@ -70,7 +70,7 @@ export const gorceryProducts = [
     popular:false,
     productRatngs: 4,
     numbersOfRatings: 13,
-    productPrice: 20.0,
+    productPrice: 20.00,
     productInStock: true,
     productImage:
       "https://freshcart77.myshopify.com/cdn/shop/files/product-single-img-2.jpg?v=1723103592&width=720",
@@ -81,7 +81,7 @@ export const gorceryProducts = [
     popular:true,
     productRatngs: 5,
     numbersOfRatings: 21,
-    productPrice: 14.0,
+    productPrice: 14.00,
     productInStock: true,
     productImage:
       "https://freshcart77.myshopify.com/cdn/shop/files/product-img-17.jpg?v=1723016083&width=720",
@@ -89,7 +89,7 @@ export const gorceryProducts = [
   },
   {
     productName: "Slurrp Millet Chocolate",
-    popular:true,
+    popular:false,
     productRatngs: 4,
     numbersOfRatings: 23,
     productPrice: 5.0,
@@ -102,7 +102,7 @@ export const gorceryProducts = [
     popular:true,
     productRatngs: 4,
     numbersOfRatings: 500,
-    productPrice: 12.0,
+    productPrice: 12.00,
     productImage:
       "https://freshcart77.myshopify.com/cdn/shop/files/product-img-11.jpg?v=1723016071&width=720",
     productCategory: [""],
@@ -112,7 +112,7 @@ export const gorceryProducts = [
     popular:false,
     productRatngs: 3,
     numbersOfRatings: 20,
-    productPrice: 6.0,
+    productPrice: 6.00,
     productInStock: false,
     productImage:
       "https://freshcart77.myshopify.com/cdn/shop/files/product-img-8-1.jpg?v=1723016035&width=720",
@@ -127,7 +127,7 @@ export const gorceryProducts = [
     popular:true,
     productRatngs: 4.5,
     numbersOfRatings: 203,
-    productPrice: 8.0,
+    productPrice: 8.00,
     productInStock: true,
     productImage:
       "https://freshcart77.myshopify.com/cdn/shop/files/product-img-12.jpg?v=1723016066&width=720",
@@ -160,7 +160,7 @@ export const gorceryProducts = [
     popular:false,
     productRatngs: 4,
     numbersOfRatings: 23,
-    productPrice: 18.0,
+    productPrice: 18.00,
     productInStock: true,
     productImage:
       "https://freshcart77.myshopify.com/cdn/shop/files/product-img-7-1.jpg?v=1723016038&width=720",
@@ -175,7 +175,7 @@ export const gorceryProducts = [
     popular:false,
     productRatngs: 5,
     numbersOfRatings: 34,
-    productPrice: 20.0,
+    productPrice: 20.00,
     productInStock: true,
     productImage:
       "https://freshcart77.myshopify.com/cdn/shop/files/product-img-6-1.jpg?v=1723016042&width=720",
@@ -197,7 +197,7 @@ export const gorceryProducts = [
     popular:false,
     productRatngs: 4,
     numbersOfRatings: 30,
-    productPrice: 50.0,
+    productPrice: 50.00,
     productInStock: true,
     productImage:
       "https://freshcart77.myshopify.com/cdn/shop/files/product-img-10-1.jpg?v=1723016028&width=533",
@@ -265,3 +265,5 @@ export const shops = [
 
 export const shopNowBg =
   "https://freshcart77.myshopify.com/cdn/shop/files/slide-1.jpg?v=1694525326";
+export const dailyBestSellImage =
+  "https://freshcart77.myshopify.com/cdn/shop/files/banner-deal.jpg?v=1703137726&width=1920";
