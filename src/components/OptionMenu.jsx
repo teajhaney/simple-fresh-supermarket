@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const OptionMenu = ({ navItem, navDropDownItems }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,7 +33,7 @@ const OptionMenu = ({ navItem, navDropDownItems }) => {
       {isOpen && (
         <ul className="absolute  bg-white border-2 border-accents  rounded-md my-2 shadow-md z-10">
           {navDropDownItems.map((navDropDownItem) => (
-            <Link
+            <NavLink
               key={navDropDownItem.path}
               to={navDropDownItem.path}
               onClick={() => setIsOpen(false)}
@@ -43,7 +43,7 @@ const OptionMenu = ({ navItem, navDropDownItems }) => {
               <li className="p-1 hover:bg-accents text-sm text-tertiary rounded-md mx-3 my-2 cursor-pointer transition">
                 {navDropDownItem.title}
               </li>
-            </Link>
+            </NavLink>
           ))}
         </ul>
       )}
@@ -52,3 +52,5 @@ const OptionMenu = ({ navItem, navDropDownItems }) => {
 };
 
 export default OptionMenu;
+
+

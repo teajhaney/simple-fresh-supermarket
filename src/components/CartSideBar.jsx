@@ -2,6 +2,7 @@
 import React, { useEffect, useRef } from "react";
 import { useStateContext } from "../contexts/useStateContext";
 import { RxCross2 } from "react-icons/rx";
+import { NavLink } from "react-router-dom";
 
 const CartSideBar = () => {
   const { activeCartSideBar, setActiveCartSideBar } = useStateContext();
@@ -31,19 +32,33 @@ const CartSideBar = () => {
 
   return (
     <div
-      className={`fixed right-0 top-0 w-72 h-full bg-white z-50 transition-transform duration-300 ease-in-out transform ${
+      className={`fixed right-0 top-0 w-72 h-full py-10 bg-white z-50 transition-transform duration-300 ease-in-out transform ${
         activeCartSideBar ? "translate-x-0" : "translate-x-full"
-      }`}
+      } flex flex-col justify-center items-center border-l border-accents px-2`}
       ref={cartRef}>
-      <div className="flex justify-between items-center p-4 border-b-2 border-accents">
-        <h2 className="text-xl font-bold">Cart</h2>
-        <RxCross2
-          className="cursor-pointer"
-          onClick={() => setActiveCartSideBar(false)}
-        />
-      </div>
-      <div className="p-4">
-        <p>Cart items here...</p>
+      <RxCross2
+        className="absolute cursor-pointer top-5 right-2"
+        onClick={() => setActiveCartSideBar(false)}
+      />
+      <div className="flex flex-col justify-center items-center gap-10 text-center">
+        <div className="flex flex-col gap-2">
+          <h2 className="text-2xl font-bold">Your cart is empty</h2>
+          <button className="px-3 py-2 text-sm rounded-md text-white bg-primary inline-block">
+            Continue Shopping
+          </button>
+        </div>
+        <div className="flex flex-col gap-2">
+          <h2 className="text-xl font-bold">Have an account?</h2>
+          <h2>
+            <NavLink
+              to="/sign-in"
+              onClick={() => setActiveCartSideBar(false)}
+              className="text-primary">
+              Log in
+            </NavLink>{" "}
+            to check out faster.
+          </h2>
+        </div>
       </div>
     </div>
   );
