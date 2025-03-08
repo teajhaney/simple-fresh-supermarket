@@ -6,10 +6,9 @@ const DiscountsComponents = () => {
   return (
     <div className="  mt-16 grid grid-cols-1 lg:grid-cols-2 gap-5 transition-all duration-500 ease-in-out">
       {discounts.map(({ image, title, discount }, index) => (
-        <NavLink to="/products-page">
+        <NavLink to="/products-page" key={index}>
           <div className="h-52 rounded-lg overflow-hidden group">
             <div
-              key={index}
               className="h-52 rounded-lg overflow-hidden flex flex-col gap-2  justify-center  px-5 bg-cover group-hover:scale-101 transition-all duration-300 ease-in-out"
               style={{ backgroundImage: `url(${image})` }}>
               <h1 className="sectionHeadings group-hover:scale-101 transition-all duration-300 ease-in-out">

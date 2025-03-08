@@ -10,7 +10,7 @@ const DailyBestSells = () => {
       <div className="flex flex-col md:flex-row gap-3">
         {/* Best sells label */}
         <div
-          className="bg-primary p-8 h-96  2xl:h-96 lg:w-[350px] 2xl:w-[300px] flex flex-col gap-3 bg-center bg-cover bg-no-repeat rounded-lg text-white"
+          className="p-8 h-96  2xl:h-96 lg:w-[350px] 2xl:w-[300px] flex flex-col gap-3 bg-center bg-cover bg-no-repeat rounded-lg text-white"
           style={{ backgroundImage: `url(${dailyBestSellImage})` }}>
           <h1 className="font-bold text-xl md:text-2xl">
             100% Organic Coffee Beans
@@ -20,7 +20,7 @@ const DailyBestSells = () => {
         </div>
 
         {/* Best sell product */}
-        <div className="bg-primary w-full grid gap-2 grid-cols-1 md:grid-cols-1 lg:grid-cols-3 flex-grow">
+        <div className="w-full grid gap-2 grid-cols-1 md:grid-cols-1 lg:grid-cols-3 flex-grow">
           {gorceryProducts
             .filter((product) => product.bestSells)
             .map((gorceryProduct, index) => (

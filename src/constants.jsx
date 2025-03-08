@@ -1,3 +1,8 @@
+import { IoMdTime } from "react-icons/io";
+import { CiGift } from "react-icons/ci";
+import { AiOutlineProduct } from "react-icons/ai";
+import { TbExchange } from "react-icons/tb";
+
 export const gorceryProducts = [
   {
     bestSells: false,
@@ -281,3 +286,30 @@ export const shopNowBg =
   "https://freshcart77.myshopify.com/cdn/shop/files/slide-1.jpg?v=1694525326";
 export const dailyBestSellImage =
   "https://freshcart77.myshopify.com/cdn/shop/files/banner-deal.jpg?v=1703137726&width=1920";
+
+export const moreInfos = [
+  {
+    icon: <IoMdTime />,
+    heading: "10 minute grocery now",
+    description:
+      "Get your order delivered to your doorstep at the earliest from FreshCart pickup stores near you.",
+  },
+  {
+    icon: <CiGift />,
+    heading: "Best Prices & Offers",
+    description:
+      "Cheaper prices than your local supermarket, great cashback offers to top it off. Get best pricess & offers.",
+  },
+  {
+    icon: <AiOutlineProduct />,
+    heading: "Wide Assortment",
+    description:
+      "Choose from 5000+ products across food, personal care, household, bakery, veg and non-veg & other categories.",
+  },
+  {
+    icon: <TbExchange />,
+    heading: "Easy Returns",
+    description:
+      "Not satisfied with a product? Return it at the doorstep & get a refund within hours. No questions asked",
+  },
+];
