@@ -28,7 +28,7 @@ const Layout = () => {
       <Footer />
       {activeCartSideBar && (
         <div
-          className="fixed top-0 left-0 w-full h-full bg-primary/5 opacity-50 z-40"
+          className="fixed top-0 left-0 w-full h-full bg-primary/10 opacity-50 z-40"
           onClick={closeSidebars} // Close when clicking overlay
         ></div>
       )}

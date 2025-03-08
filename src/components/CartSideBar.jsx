@@ -3,11 +3,12 @@ import React, { useEffect, useRef } from "react";
 import { useStateContext } from "../contexts/useStateContext";
 import { RxCross2 } from "react-icons/rx";
 import { NavLink } from "react-router-dom";
+import { ButtonComponent } from "./export_components";
 
 const CartSideBar = () => {
   const { activeCartSideBar, setActiveCartSideBar } = useStateContext();
-    const cartRef = useRef(null);
-    const sideBarRef=useRef(null);
+  const cartRef = useRef(null);
+  const sideBarRef = useRef(null);
 
   useEffect(() => {
     console.log("CartSideBar activeCartSideBar:", activeCartSideBar); // Debug
@@ -40,12 +41,14 @@ const CartSideBar = () => {
         className="absolute cursor-pointer top-5 right-2"
         onClick={() => setActiveCartSideBar(false)}
       />
-      <div className="flex flex-col justify-center items-center gap-10 text-center">
-        <div className="flex flex-col gap-2">
+
+      <div className="flex flex-col justify-center items-center gap-10 ">
+        <div className="flex flex-col gap-2 ">
           <h2 className="text-2xl font-bold">Your cart is empty</h2>
-          <button className="px-3 py-2 text-sm rounded-md text-white bg-primary inline-block">
-            Continue Shopping
-          </button>
+          <ButtonComponent
+            className={"text-sm font-bold bg-primary self-center"}
+            text={"Continue Shopping"}
+          />
         </div>
         <div className="flex flex-col gap-2">
           <h2 className="text-xl font-bold">Have an account?</h2>
@@ -58,6 +61,7 @@ const CartSideBar = () => {
             </NavLink>{" "}
             to check out faster.
           </h2>
+          
         </div>
       </div>
     </div>

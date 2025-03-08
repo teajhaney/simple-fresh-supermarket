@@ -236,4 +236,4 @@ export const shops = [
   { title: "Cart", path: "/cart" },
 ];
 
-
+export const shopNowBg = "https://freshcart77.myshopify.com/cdn/shop/files/slide-1.jpg?v=1694525326";

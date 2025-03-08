@@ -8,6 +8,7 @@
     --color-secondary: #011E2B;
     --color-accents: #F0F3F2;
     --color-tertiary: #5C6C75
+    --color-ylw: ##5C6C75;
     --font-inter: 'Inter', sans-serif;
 }
 
@@ -15,5 +16,8 @@
 @layer utilities {
   .bodyContent {
     @apply mx-3 2xl:mx-auto 2xl:w-[1270px];
+  }
+  .sectionHeadings{
+    @apply text-tertiary font-medium text-xl
   }
 }

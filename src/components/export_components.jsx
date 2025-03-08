@@ -5,4 +5,8 @@ export { default as SideBarNav } from "./SideBarNav.jsx";
 export { default as Layout } from "./Layout.jsx";
 export { default as Footer } from "./Footer.jsx";
 export { default as CartSideBar } from "./CartSideBar.jsx";
+export { default as ButtonComponent } from "./ButtonComponent.jsx";
+export { default as ShopNow } from "./home-page/ShopNow.jsx";
+export { default as FeaturedCategories } from "./home-page/FeaturedCategories.jsx";
 
+;
