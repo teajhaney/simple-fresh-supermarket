@@ -11,6 +11,5 @@ export { default as FeaturedCategories } from "./home-page/FeaturedCategories.js
 export { default as DiscountsComponent } from "./home-page/DiscountsComponent.jsx";
 export { default as PopularProducts } from "./home-page/PopularProducts.jsx";
 export { default as DailyBestSells } from "./home-page/DailyBestSells.jsx";
-export {default as Infos} from "./home-page/Infos.jsx"
-
-;
+export { default as Infos } from "./home-page/Infos.jsx";
+export { default as DownloadButtons } from "./DownloadButtons";

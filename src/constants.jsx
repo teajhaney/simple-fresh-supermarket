@@ -351,9 +351,17 @@ export const becomeShoppers = [
 ];
 
 export const programs = [
-  "Freshcart programs",
+  "Simplecart programs",
   "Gift Cards",
   "Promos & Coupons",
   "Freshcart Ads",
   "Careers",
+];
+export const svgs = [
+  "/visa.svg",
+  "/mastercard.svg",
+  "/amex.svg",
+  "/paypal.svg",
+  "/alipay.svg",
+  "/elo.svg",
 ];

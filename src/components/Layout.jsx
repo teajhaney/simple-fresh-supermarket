@@ -23,7 +23,6 @@ const Layout = () => {
       <NavigationBar />
       <CartSideBar />
       <SideBarNav />
-
       <Outlet />
       <Footer />
       {activeCartSideBar && (
