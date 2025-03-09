@@ -1,9 +1,11 @@
 import React, { useState } from "react";
-import { gorceryProducts } from "../../constants";
+import { gorceryProducts, productListVariantsXright } from "../../constants";
 import { ButtonComponent } from "../export_components";
 import { FaStar } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import { IoIosArrowForward } from "react-icons/io";
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
 
 const ProductList = () => {
   //  Number of products per page
@@ -20,6 +22,7 @@ const ProductList = () => {
   const endIndex = startIndex + productsPerPage;
   const displayedProducts = gorceryProducts.slice(startIndex, endIndex);
 
+
   return (
     <div className="md:col-span-4 lg:col-span-9 flex-col ">
       <div className="flex flex-col gap-3">
@@ -30,7 +33,13 @@ const ProductList = () => {
           </h1>
         </div>
         {/* products list */}
-        <div className=" grid grid-cols-2 lg:grid-cols-4 gap-2 ">
+        <motion.div
+          key={currentPage}
+          variants={productListVariantsXright}
+          initial="hidden"
+          animate="visible"
+          exit="hidden"
+          className="grid grid-cols-2 lg:grid-cols-4 gap-2 ">
           {displayedProducts.map((displayedProduct, index) => (
             <NavLink
               to="/products-details-page"
@@ -69,7 +78,7 @@ const ProductList = () => {
               </div>
             </NavLink>
           ))}
-        </div>
+        </motion.div>
       </div>
 
       {/* Pagination Buttons */}
@@ -81,7 +90,7 @@ const ProductList = () => {
             onClick={() => setCurrentPage(index)}
             className={`px-4 py-2 rounded-lg font-semibold ${
               currentPage === index
-                ? "bg-primary cursor-not-allowed"
+                ? "bg-primary text-white cursor-not-allowed"
                 : " text-secondary hover:bg-accents"
             }`}>
             {index + 1}

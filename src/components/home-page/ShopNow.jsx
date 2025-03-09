@@ -1,11 +1,19 @@
 import React from "react";
-import { shopNowBg } from "../../constants";
+import { shopNowBg, productListVariantsXleft } from "../../constants";
 import { NavLink } from "react-router-dom";
 import { ButtonComponent } from "../export_components";
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
 const ShopNow = () => {
   return (
     <>
       {" "}
+         <motion.div
+        variants={productListVariantsXleft}
+        initial="hidden"
+        animate="visible"
+        exit="hidden"
+      >
       <NavLink to={"/products-page"}>
         <section
           className="bg-cover bg-center h-80 md:h-120  rounded-lg flex flex-col justify-center gap-4 px-3 md:px-16 cursor-pointer transition-all duration-500 ease-in-out"
@@ -28,6 +36,7 @@ const ShopNow = () => {
           </div>
         </section>
       </NavLink>
+      </motion.div>
     </>
   );
 };

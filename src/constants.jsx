@@ -47,7 +47,7 @@ export const gorceryProducts = [
     buttonLabel: "Add to cart",
     bestSells: true,
     productName: "Beetroot",
-    popular: true,
+    popular: false,
     productRatings: 3,
     numbersOfRatings: 23,
     productPrice: 18.0,
@@ -163,7 +163,7 @@ export const gorceryProducts = [
     buttonLabel: "Add to cart",
     bestSells: false,
     productName: "Roast ground Coffee",
-    popular: true,
+    popular: false,
     productRatings: 4,
     numbersOfRatings: 500,
     productInstock: true,
@@ -206,7 +206,7 @@ export const gorceryProducts = [
     buttonLabel: "Sold out",
     bestSells: false,
     productName: "Haldiram's Sev Bhujia",
-    popular: true,
+    popular: false,
     productRatings: 3,
     numbersOfRatings: 23,
     productPrice: 17.0,
@@ -286,9 +286,9 @@ export const gorceryProducts = [
   },
   {
     buttonLabel: "Add to cart",
-    bestSells: true,
+    bestSells: false,
     productName: "Fresh Apple",
-    popular: true,
+    popular: false,
     productRatings: 5,
     numbersOfRatings: 100,
     productPrice: 250.0,
@@ -466,3 +466,22 @@ export const svgs = [
   "/alipay.svg",
   "/elo.svg",
 ];
+
+
+export const productListVariantsXright = {
+   hidden: { opacity: 0, x: 50 }, // Start hidden with opacity 0, slightly to the right
+   visible: { opacity: 1, x: 0, transition: { duration: 0.5 } }, // Slide in smoothly
+};
+ export const productListVariantsXleft = {
+   hidden: { opacity: 0, x: -50 }, // Start hidden with opacity 0, slightly to the right
+   visible: { opacity: 1, x: 0, transition: { duration: 0.5 } }, // Slide in smoothly
+ };
+
+ export  const productListVariantsYbottom = {
+    hidden: { opacity: 0, y: 50 }, // Start hidden with opacity 0, slightly to the right
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }, // Slide in smoothly
+ };
+   export const productListVariantsYtop = {
+     hidden: { opacity: 0, y: 50 }, // Start hidden with opacity 0, slightly to the right
+     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }, // Slide in smoothly
+   };
