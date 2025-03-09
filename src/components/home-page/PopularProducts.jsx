@@ -24,18 +24,18 @@ const PopularProducts = () => {
       {/* Product List */}
       <div
         ref={scrollRef}
-        className="flex gap-2 overflow-hidden scroll-smooth no-scrollbar lg:grid lg:grid-cols-5">
+        className="flex gap-2 overflow-hidden scroll-smooth no-scrollbar lg:grid lg:grid-cols-5 ">
         {gorceryProducts
           .filter((product) => product.popular)
           .map((gorceryProduct, index) => (
-            <NavLink to="/products-details-page" key={index}>
-              <div className=" h-auto w-100  lg:w-full flex-shrink-0 bg-white  flex flex-col gap-2  p-4 rounded-lg  border border-accents hover:border-primary transition-all duration-500 ease-in-out">
+            <NavLink to="/products-details-page" key={index} className={'group'}>
+              <div className=" h-auto w-100  lg:w-full flex-shrink-0 bg-white  flex flex-col gap-2  p-4 rounded-lg  border border-accents group-hover:border-primary transition-all duration-500 ease-in-out">
                 <img
                   src={gorceryProduct.productImage}
                   alt={gorceryProduct.productName}
                   className="w-full h-full object-contain"
                 />
-                <h2 className="text-lg lg:text-sm font-semibold">
+                <h2 className="text-lg lg:text-sm font-semibold group-hover:text-primary">
                   {gorceryProduct.productName}
                 </h2>
                 <div className="flex text-[#FFC007] text-sm">

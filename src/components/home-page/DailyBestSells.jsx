@@ -26,9 +26,9 @@ const DailyBestSells = () => {
           {gorceryProducts
             .filter((product) => product.bestSells)
             .map((gorceryProduct, index) => (
-              <NavLink to="/products-details-page" key={index}>
+              <NavLink to="/products-details-page" key={index} className={'group'}>
                 <div
-                  className="bg-white flex flex-col gap-2 p-4 rounded-lg border border-accents hover:border-primary transition-all duration-500 ease-in-out
+                  className="bg-white flex flex-col gap-2 p-4 rounded-lg border border-accents group-hover:border-primary transition-all duration-500 ease-in-out
                   h-auto">
                   {/* Centered Image */}
                   <div className="h-full flex justify-center items-center">
@@ -40,7 +40,7 @@ const DailyBestSells = () => {
                   </div>
 
                   {/* Product Name */}
-                  <h2 className="text-lg lg:text-sm font-semibold">
+                  <h2 className="text-lg lg:text-sm font-semibold group-hover:text-primary">
                     {gorceryProduct.productName}
                   </h2>
 

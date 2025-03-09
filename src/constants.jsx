@@ -5,6 +5,20 @@ import { TbExchange } from "react-icons/tb";
 
 export const gorceryProducts = [
   {
+    buttonLabel: "Add to cart",
+    bestSells: false,
+    productName: "Fresh Banana",
+    popular: false,
+    productRatings: 5,
+    numbersOfRatings: 300,
+    productPrice: 150.0,
+    productInStock: true,
+    productImage:
+      "https://freshcart77.myshopify.com/cdn/shop/files/product-img-18.jpg?v=1723016079&width=720",
+    productCategory: ["Food, Beverages & Tobacco", "Fruits & Vegetables"],
+  },
+  {
+    buttonLabel: "Add to cart",
     bestSells: false,
     productName: "Golden Pineapple",
     popular: true,
@@ -17,6 +31,7 @@ export const gorceryProducts = [
     productCategory: ["Food, Beverages & Tobacco", "Fruits & Vegetables"],
   },
   {
+    buttonLabel: "Sold out",
     bestSells: false,
     productName: "Cadbury 5 Star Chocolate",
     popular: false,
@@ -29,6 +44,7 @@ export const gorceryProducts = [
     productCategory: ["Chocolate", "Food, Beverages & Tobacco"],
   },
   {
+    buttonLabel: "Add to cart",
     bestSells: true,
     productName: "Beetroot",
     popular: true,
@@ -41,6 +57,7 @@ export const gorceryProducts = [
     productCategory: ["Food, Beverages & Tobacco"],
   },
   {
+    buttonLabel: "Add to cart",
     bestSells: false,
     productName: "Onion Flavour Potato",
     popular: true,
@@ -53,6 +70,7 @@ export const gorceryProducts = [
     productCategory: "",
   },
   {
+    buttonLabel: "Sold out",
     bestSells: false,
     productName: "Salted Instant Popcorn",
     popular: true,
@@ -65,6 +83,7 @@ export const gorceryProducts = [
     productCategory: ["Food, Beverages & Tobacco", "Popcorn"],
   },
   {
+    buttonLabel: "Add to cart",
     productName: "NutriChoice Digestive",
     popular: true,
     productRatings: 3,
@@ -76,6 +95,20 @@ export const gorceryProducts = [
     productCategory: ["Biscuits & Bakery"],
   },
   {
+    buttonLabel: "Add to cart",
+    bestSells: false,
+    productName: "Haldiram's Sev Bhujia",
+    popular: true,
+    productRatings: 3,
+    numbersOfRatings: 23,
+    productPrice: 17.0,
+    productInStock: true,
+    productImage:
+      "https://freshcart77.myshopify.com/cdn/shop/files/product-img-1-1.jpg?v=1723016059&width=720",
+    productCategory: ["Food, Beverages & Tobacco", "Trail & Snack Mixes"],
+  },
+  {
+    buttonLabel: "Add to cart",
     bestSells: false,
     productName: "Napolitanke Ljesnjak",
     popular: false,
@@ -88,6 +121,20 @@ export const gorceryProducts = [
     productCategory: ["Baking Chocolate", "Food, Beverages & Tobacco"],
   },
   {
+    buttonLabel: "Add to cart",
+    bestSells: false,
+    productName: "Golden Pineapple",
+    popular: true,
+    productRatings: 4,
+    numbersOfRatings: 23,
+    productPrice: 15.0,
+    productInStock: true,
+    productImage:
+      "https://freshcart77.myshopify.com/cdn/shop/files/pinapple.jpg?v=1724400043&width=360",
+    productCategory: ["Food, Beverages & Tobacco", "Fruits & Vegetables"],
+  },
+  {
+    buttonLabel: "Add to cart",
     bestSells: false,
     productName: "Fresh Kiwi",
     popular: true,
@@ -100,26 +147,34 @@ export const gorceryProducts = [
     productCategory: ["Food, Beverages & Tobacco", "Fruits & Vegetables"],
   },
   {
+    buttonLabel: "Add to cart",
+    bestSells: false,
     productName: "Slurrp Millet Chocolate",
     popular: false,
     productRatings: 4,
     numbersOfRatings: 23,
+    productInstock: true,
     productPrice: 5.0,
     productImage:
       "https://freshcart77.myshopify.com/cdn/shop/files/product-img-9-1.jpg?v=1723016032&width=720",
     productCategory: ["Food, Beverages & Tobacco", "Millet"],
   },
   {
+    buttonLabel: "Add to cart",
+    bestSells: false,
     productName: "Roast ground Coffee",
     popular: true,
     productRatings: 4,
     numbersOfRatings: 500,
+    productInstock: true,
     productPrice: 12.0,
     productImage:
       "https://freshcart77.myshopify.com/cdn/shop/files/product-img-11.jpg?v=1723016071&width=720",
     productCategory: [""],
   },
   {
+    buttonLabel: "Sold out",
+    bestSells: false,
     productName: "Kellogg's Original Cereals",
     popular: false,
     productRatings: 3,
@@ -135,6 +190,7 @@ export const gorceryProducts = [
     ],
   },
   {
+    buttonLabel: "Add to cart",
     bestSells: true,
     productName: "Crushed Tomatoes",
     popular: true,
@@ -147,18 +203,20 @@ export const gorceryProducts = [
     productCategory: ["Food, Beverages & Tobacco", "Tomato Paste"],
   },
   {
+    buttonLabel: "Sold out",
     bestSells: false,
     productName: "Haldiram's Sev Bhujia",
     popular: true,
     productRatings: 3,
     numbersOfRatings: 23,
     productPrice: 17.0,
-    productInStock: true,
+    productInStock: false,
     productImage:
       "https://freshcart77.myshopify.com/cdn/shop/files/product-img-1-1.jpg?v=1723016059&width=720",
     productCategory: ["Food, Beverages & Tobacco", "Trail & Snack Mixes"],
   },
   {
+    buttonLabel: "Add to cart",
     bestSells: false,
     productName: "Fresh Banana",
     popular: false,
@@ -171,6 +229,33 @@ export const gorceryProducts = [
     productCategory: ["Food, Beverages & Tobacco", "Fruits & Vegetables"],
   },
   {
+    buttonLabel: "Add to cart",
+    bestSells: true,
+    productName: "Beetroot",
+    popular: true,
+    productRatings: 3,
+    numbersOfRatings: 23,
+    productPrice: 18.0,
+    productInStock: true,
+    productImage:
+      "https://freshcart77.myshopify.com/cdn/shop/files/product-img-19.jpg?v=1723016074&width=720",
+    productCategory: ["Food, Beverages & Tobacco"],
+  },
+  {
+    buttonLabel: "Add to cart",
+    bestSells: false,
+    productName: "Fresh Kiwi",
+    popular: true,
+    productRatings: 5,
+    numbersOfRatings: 21,
+    productPrice: 14.0,
+    productInStock: true,
+    productImage:
+      "https://freshcart77.myshopify.com/cdn/shop/files/product-img-17.jpg?v=1723016083&width=720",
+    productCategory: ["Food, Beverages & Tobacco", "Fruits & Vegetables"],
+  },
+  {
+    buttonLabel: "Add to cart",
     bestSells: false,
     productName: "Britannia Cheese Slices",
     popular: false,
@@ -187,6 +272,7 @@ export const gorceryProducts = [
     ],
   },
   {
+    buttonLabel: "Add to cart",
     bestSells: false,
     productName: "Blueberry Yogurt",
     popular: false,
@@ -199,28 +285,43 @@ export const gorceryProducts = [
     productCategory: ["Food, Beverages & Tobacco", "Fruits & Vegetables"],
   },
   {
+    buttonLabel: "Add to cart",
     bestSells: true,
     productName: "Fresh Apple",
     popular: true,
     productRatings: 5,
     numbersOfRatings: 100,
     productPrice: 250.0,
-    productInStock: false,
+    productInStock: true,
     productImage:
       "https://freshcart77.myshopify.com/cdn/shop/files/product-img-15.jpg?v=1723016086&width=533",
     productCategory: ["Food, Beverages & Tobacco", "Fruits & Vegetables"],
   },
   {
+    buttonLabel: "Sold out",
     bestSells: false,
     productName: "Amul Butter - 500g",
     popular: false,
     productRatings: 4,
     numbersOfRatings: 30,
     productPrice: 50.0,
-    productInStock: true,
+    productInStock: false,
     productImage:
       "https://freshcart77.myshopify.com/cdn/shop/files/product-img-10-1.jpg?v=1723016028&width=533",
     productCategory: ["Food, Beverages & Tobacco", " Salted Butter"],
+  },
+  {
+    buttonLabel: "Add to cart",
+    bestSells: false,
+    productName: "Blueberry Yogurt",
+    popular: false,
+    productRatings: 5,
+    numbersOfRatings: 34,
+    productPrice: 20.0,
+    productInStock: true,
+    productImage:
+      "https://freshcart77.myshopify.com/cdn/shop/files/product-img-6-1.jpg?v=1723016042&width=720",
+    productCategory: ["Food, Beverages & Tobacco", "Fruits & Vegetables"],
   },
 ];
 

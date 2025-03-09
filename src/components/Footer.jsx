@@ -20,23 +20,23 @@ const Footer = () => {
         <div className="flex flex-col gap-5 md:grid md:grid-cols-3 lg:grid lg:grid-cols-5 transition-all duration-500 ease-in-out">
           {/* categories */}
           <div className="flex flex-col gap-3">
-            <h1 className="text-tertiary font-semibold text-lg">Categories</h1>
+            <h1 className="text-secondary font-semibold text-lg">Categories</h1>
             <div className="flex flex-col gap-2">
               {footerCategories.map((footerCategory, index) => (
                 <NavLink key={index} to="/products-page">
-                  <p className="text-sm">{footerCategory}</p>
+                  <p className="text-sm text-tertiary">{footerCategory}</p>
                 </NavLink>
               ))}
             </div>
           </div>
           {/* get to know us */}
           <div className="flex flex-col gap-3">
-            <h1 className="text-tertiary font-semibold text-lg">
+            <h1 className="text-secondary font-semibold text-lg">
               Get to know us
             </h1>
             <div className="flex flex-col gap-2">
               {getToKnowUs.map((getToKnowUs, index) => (
-                <p key={index} className="text-sm">
+                <p key={index} className="text-sm text-tertiary">
                   {getToKnowUs}
                 </p>
               ))}
@@ -44,12 +44,12 @@ const Footer = () => {
           </div>
           {/*For consumers */}
           <div className="flex flex-col gap-3">
-            <h1 className="text-tertiary font-semibold text-lg">
+            <h1 className="text-secondary font-semibold text-lg">
               For consumers
             </h1>
             <div className="flex flex-col gap-2">
               {forConsumers.map((forConsumer, index) => (
-                <p key={index} className="text-sm">
+                <p key={index} className="text-sm text-tertiary">
                   {forConsumer}
                 </p>
               ))}
@@ -57,12 +57,12 @@ const Footer = () => {
           </div>
           {/*shopper */}
           <div className="flex flex-col gap-3">
-            <h1 className="text-tertiary font-semibold text-lg">
+            <h1 className="text-secondary font-semibold text-lg">
               Become a Shooper
             </h1>
             <div className="flex flex-col gap-2">
               {becomeShoppers.map((becomeShopper, index) => (
-                <p key={index} className="text-sm">
+                <p key={index} className="text-sm text-tertiary">
                   {becomeShopper}
                 </p>
               ))}
@@ -70,12 +70,12 @@ const Footer = () => {
           </div>
           {/*programs */}
           <div className="flex flex-col gap-3">
-            <h1 className="text-tertiary font-semibold text-lg">
+            <h1 className="text-secondary font-semibold text-lg">
               SimpleCart programs
             </h1>
             <div className="flex flex-col gap-2">
               {programs.map((program, index) => (
-                <p key={index} className="text-sm">
+                <p key={index} className="text-sm text-tertiary">
                   {program}
                 </p>
               ))}
@@ -130,10 +130,10 @@ const Footer = () => {
           <div className="flex gap-3 items-center">
             <p className="text-sm text-tertiary">Follow us on</p>
             <div className="flex gap-2">
-              <div className="h-8 w-8 border border-tertiary rounded-lg flex items-center justify-center">
+              <div className="h-8 w-8 border border-secondary rounded-lg flex items-center justify-center">
                 <FaFacebook />
               </div>
-              <div className="h-8 w-8 border border-tertiary rounded-lg flex items-center justify-center">
+              <div className="h-8 w-8 border border-secondary rounded-lg flex items-center justify-center">
                 <FaInstagram />
               </div>
               <div className="h-8 w-8 border border-tertiary rounded-lg flex items-center justify-center">

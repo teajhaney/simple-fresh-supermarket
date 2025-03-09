@@ -27,7 +27,7 @@ const Infos = () => {
             className=" h-auto w-full  lg:w-full flex-shrink-0 bg-white  flex flex-col gap-2  p-4 rounded-lg   transition-all duration-500 ease-in-out">
             <div className="text-5xl text-primary">{moreInfo.icon}</div>
             <h2 className="font-semibold">{moreInfo.heading}</h2>
-            <h2 className=" lg:text-sm text-tertiary/10">
+            <h2 className=" lg:text-sm text-tertiary">
               {moreInfo.description}{" "}
               <span className="text-primary">policy.</span>
             </h2>
