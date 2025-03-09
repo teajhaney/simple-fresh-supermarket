@@ -1,8 +1,13 @@
 import React from "react";
 import { IoFilterOutline } from "react-icons/io5";
-import { ProductList, FilterSection } from "../components/export_components";
+import {
+  ProductList,
+  FilterSection,
+  FilterSideBar,
+} from "../components/export_components";
 import { NavLink } from "react-router-dom";
 import { useStateContext } from "../contexts/useStateContext";
+import { gorceryProducts } from "../constants";
 const ProductsPage = () => {
   const { setActiveFilterSideBar } = useStateContext();
   return (
@@ -18,18 +23,24 @@ const ProductsPage = () => {
         {/* filter div */}
         <div className="md:col-span-2 lg:col-span-3 ">
           {/* hidden */}
-          <div className="flex justify-between md:hidden cursor-pointer"
-          onClick={setActiveFilterSideBar((prevState)=>!prevState)}>
+          <div
+            className="flex justify-between md:hidden cursor-pointer"
+            onClick={() => setActiveFilterSideBar((prevState) => !prevState)}>
             <div className="flex gap-3">
               <IoFilterOutline />
-              <h1 className="text-secondary font-semibold">Filter and sort</h1>
+              <h1 className="text-secondary font-semibold hover:underline hover:decoration-secondary">
+                Filter and sort
+              </h1>
             </div>
-            <h1 className="text-grayed font-semibold">18 products</h1>
+            <h1 className="text-grayed font-semibold">
+              {gorceryProducts.length} products
+            </h1>
           </div>
           <FilterSection />
         </div>
         {/* product div */}
         <ProductList />
+        <FilterSideBar />
       </div>
     </div>
   );

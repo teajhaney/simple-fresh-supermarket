@@ -18,3 +18,4 @@ export { default as DownloadButtons } from "./DownloadButtons";
 export { default as CollapsibleSection } from "./CollapsibleSection.jsx";
 export { default as CheckboxWithText } from "./CheckboxWithText.jsx";
 export { default as RangeComponent } from "./RangeComponent.jsx";
+export { default as FilterSideBar } from "./FilterSideBar.jsx";

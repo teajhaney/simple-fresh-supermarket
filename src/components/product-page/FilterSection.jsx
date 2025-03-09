@@ -29,6 +29,7 @@ const FilterSection = () => {
           <CheckboxWithText label={`In stock (${productOutOfStock})`} />
         </CollapsibleSection>
       </div>
+      <hr className="border-t-2  border-accents" />
       {/* Range */}
       <div>
         <CollapsibleSection title="Price">
