@@ -12,5 +12,9 @@ export { default as DiscountsComponent } from "./home-page/DiscountsComponent.js
 export { default as PopularProducts } from "./home-page/PopularProducts.jsx";
 export { default as DailyBestSells } from "./home-page/DailyBestSells.jsx";
 export { default as ProductList } from "./product-page/ProductList.jsx";
+export { default as FilterSection } from "./product-page/FilterSection.jsx";
 export { default as Infos } from "./home-page/Infos.jsx";
 export { default as DownloadButtons } from "./DownloadButtons";
+export { default as CollapsibleSection } from "./CollapsibleSection.jsx";
+export { default as CheckboxWithText } from "./CheckboxWithText.jsx";
+export { default as RangeComponent } from "./RangeComponent.jsx";

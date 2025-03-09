@@ -61,7 +61,7 @@ const PopularProducts = () => {
                     ))}
                   </div>
                   <p className="text-secondary">
-                    ${gorceryProduct.productPrice}
+                    ${gorceryProduct.productPrice.toFixed(2)}
                   </p>
                   <ButtonComponent
                     text={"Add to cart"}

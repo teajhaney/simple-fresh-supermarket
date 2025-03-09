@@ -153,7 +153,7 @@ export const gorceryProducts = [
     popular: false,
     productRatings: 4,
     numbersOfRatings: 23,
-    productInstock: true,
+    productInStock: true,
     productPrice: 5.0,
     productImage:
       "https://freshcart77.myshopify.com/cdn/shop/files/product-img-9-1.jpg?v=1723016032&width=720",
@@ -166,7 +166,7 @@ export const gorceryProducts = [
     popular: false,
     productRatings: 4,
     numbersOfRatings: 500,
-    productInstock: true,
+    productInStock: true,
     productPrice: 12.0,
     productImage:
       "https://freshcart77.myshopify.com/cdn/shop/files/product-img-11.jpg?v=1723016071&width=720",
@@ -467,21 +467,35 @@ export const svgs = [
   "/elo.svg",
 ];
 
-
 export const productListVariantsXright = {
-   hidden: { opacity: 0, x: 50 }, // Start hidden with opacity 0, slightly to the right
-   visible: { opacity: 1, x: 0, transition: { duration: 0.5 } }, // Slide in smoothly
+  hidden: { opacity: 0, x: 50 }, // Start hidden with opacity 0, slightly to the right
+  visible: { opacity: 1, x: 0, transition: { duration: 0.5 } }, // Slide in smoothly
 };
- export const productListVariantsXleft = {
-   hidden: { opacity: 0, x: -50 }, // Start hidden with opacity 0, slightly to the right
-   visible: { opacity: 1, x: 0, transition: { duration: 0.5 } }, // Slide in smoothly
- };
+export const productListVariantsXleft = {
+  hidden: { opacity: 0, x: -50 }, // Start hidden with opacity 0, slightly to the right
+  visible: { opacity: 1, x: 0, transition: { duration: 0.5 } }, // Slide in smoothly
+};
 
- export  const productListVariantsYbottom = {
-    hidden: { opacity: 0, y: 50 }, // Start hidden with opacity 0, slightly to the right
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }, // Slide in smoothly
- };
-   export const productListVariantsYtop = {
-     hidden: { opacity: 0, y: 50 }, // Start hidden with opacity 0, slightly to the right
-     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }, // Slide in smoothly
-   };
+export const productListVariantsYbottom = {
+  hidden: { opacity: 0, y: 50 }, // Start hidden with opacity 0, slightly to the right
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }, // Slide in smoothly
+};
+export const productListVariantsYtop = {
+  hidden: { opacity: 0, y: 50 }, // Start hidden with opacity 0, slightly to the right
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }, // Slide in smoothly
+};
+
+export const productCategories = [
+  "Baking Chocolate",
+  "Biscuits & Bakery",
+  "Cheese",
+  "Chocolate",
+  "Corn",
+  "Food, Beverages & Tobacco",
+  "Fruits & Vegetables",
+  "Millet",
+  "Popcorn",
+  "Salted Butter",
+  "Tomato Paste",
+  "Trail & Snack Mixes",
+];

@@ -69,7 +69,7 @@ const ProductList = () => {
                   ))}
                 </div>
                 <p className="text-secondary">
-                  ${displayedProduct.productPrice}
+                  ${displayedProduct.productPrice.toFixed(2)}
                 </p>
                 <ButtonComponent
                   text={displayedProduct.buttonLabel}

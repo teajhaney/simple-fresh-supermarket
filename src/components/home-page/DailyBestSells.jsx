@@ -12,12 +12,13 @@ import {motion} from "framer-motion"
 
 const DailyBestSells = () => {
   return (
-    <section className="h-fit mt-24 flex flex-col gap-3 ">
+    <section className="h-fit mt-24  ">
       <motion.div
         variants={productListVariantsXright}
         initial="hidden"
         animate="visible"
-        exit="hidden">
+        exit="hidden"
+        className="flex flex-col gap-3">
         <h1 className="sectionHeadings">Daily Best Sells</h1>
         <div className="flex flex-col md:flex-row gap-3">
           {/* Best sells label */}
@@ -74,7 +75,7 @@ const DailyBestSells = () => {
 
                     {/* Price */}
                     <p className="text-secondary">
-                      ${gorceryProduct.productPrice}
+                      ${gorceryProduct.productPrice.toFixed(2)}
                     </p>
 
                     {/* Button */}
