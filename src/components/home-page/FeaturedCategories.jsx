@@ -3,7 +3,7 @@ import { categories } from "../../constants";
 import { NavLink } from "react-router-dom";
 const FeaturedCategories = () => {
   return (
-    <div className=" h-fit mt-24 flex flex-col gap-3">
+    <section className=" h-fit mt-24 flex flex-col gap-3">
       <h1 className="sectionHeadings">Featured Categories</h1>
       <div className="grid grid-cols-2 lg:grid-cols-6 gap-2 transition-all duration-500 ease-in-out">
         {categories.map(({ categoryImage, title }, index) => (
@@ -15,7 +15,7 @@ const FeaturedCategories = () => {
           </NavLink>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

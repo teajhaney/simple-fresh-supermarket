@@ -313,3 +313,47 @@ export const moreInfos = [
       "Not satisfied with a product? Return it at the doorstep & get a refund within hours. No questions asked",
   },
 ];
+
+//footer
+export const footerCategories = [
+  "Vegetables & Fruits",
+  "Breakfast & instant food",
+  "Bakery & Biscuits",
+  "Atta, rice & dal",
+  "Sauces & spreads",
+  "Organic & gourmet",
+  "Baby care",
+  "Cleaning essentials",
+  "Personal care",
+];
+
+export const getToKnowUs = [
+  "Company",
+  "About",
+  "Blog",
+  "Help Center",
+  "Our Value",
+];
+
+export const forConsumers = [
+  "Payments",
+  "Shipping",
+  "Product Returns",
+  "Shop Checkout",
+];
+
+export const becomeShoppers = [
+  "Shopper Opportunities",
+  "Become a Shopper",
+  "Earnings",
+  "Ideas & Guides",
+  "New Retailers",
+];
+
+export const programs = [
+  "Freshcart programs",
+  "Gift Cards",
+  "Promos & Coupons",
+  "Freshcart Ads",
+  "Careers",
+];

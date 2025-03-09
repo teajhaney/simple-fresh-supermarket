@@ -10,6 +10,7 @@ import {
   CartPage,
   ProductsPage,
   NotFoundPage,
+  ProductDetailsPage,
 } from "./pages/export_pages.jsx";
 import { ContextProvider } from "./contexts/ContextProvider";
 import { Layout } from "./components/export_components.jsx";
@@ -22,6 +23,7 @@ const router = createBrowserRouter([
       { path: "/", element: <HomePage />, errorElement: <NotFoundPage /> },
       { path: "/blog", element: <BlogPage /> },
       { path: "/products-page", element: <ProductsPage /> },
+      { path: "/products-details-page", element: <ProductDetailsPage /> },
       { path: "/cart", element: <CartPage /> },
       { path: "/sign-in", element: <SignInPage /> },
       { path: "/sign-up", element: <SignUpPage /> },
@@ -36,5 +38,3 @@ createRoot(document.getElementById("root")).render(
     </ContextProvider>
   </StrictMode>
 );
-
-

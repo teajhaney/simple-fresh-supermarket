@@ -17,7 +17,7 @@ const Infos = () => {
   };
 
   return (
-    <div className="bodyContents mt-24">
+    <section className="bodyContents mt-24">
       <div
         ref={scrollRef}
         className="flex gap-2 overflow-hidden scroll-smooth no-scrollbar lg:grid lg:grid-cols-4 lg:gap-4 transition-all duration-500 ease-in-out">
@@ -64,7 +64,7 @@ const Infos = () => {
           }}
         />
       </div>
-    </div>
+    </section>
   );
 };
 

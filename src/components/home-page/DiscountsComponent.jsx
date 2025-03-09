@@ -4,7 +4,7 @@ import { ButtonComponent } from "../export_components";
 import { NavLink } from "react-router-dom";
 const DiscountsComponents = () => {
   return (
-    <div className="  mt-16 grid grid-cols-1 lg:grid-cols-2 gap-5 transition-all duration-500 ease-in-out">
+    <section className="  mt-16 grid grid-cols-1 lg:grid-cols-2 gap-5 transition-all duration-500 ease-in-out">
       {discounts.map(({ image, title, discount }, index) => (
         <NavLink to="/products-page" key={index}>
           <div className="h-52 rounded-lg overflow-hidden group">
@@ -27,7 +27,7 @@ const DiscountsComponents = () => {
           </div>
         </NavLink>
       ))}
-    </div>
+    </section>
   );
 };
 

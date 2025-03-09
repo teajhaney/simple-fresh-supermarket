@@ -39,7 +39,7 @@ const NavigationBar = () => {
   }, [isDepartmentOpen]);
 
   return (
-    <div className=" flex flex-col gap-3 lg:pb-5  border-b-2 border-b-accents">
+    <nav className=" flex flex-col gap-3 lg:pb-5  border-b-2 border-b-accents">
       <div className="bodyContent h-16 flex justify-between items-center">
         <div className="flex items-center gap-16 text-4xl">
           {/* Logo */}
@@ -152,7 +152,7 @@ const NavigationBar = () => {
           </ul>
         </div>
       </div>
-    </div>
+    </nav>
   );
 };
 

@@ -5,3 +5,4 @@ export { default as CartPage } from "./CartPage.jsx";
 export { default as SignInPage } from "./SignInPage.jsx";
 export { default as SignUpPage } from "./SignUpPage.jsx";
 export { default as NotFoundPage } from "./NotFoundPage.jsx";
+export { default as ProductDetailsPage } from "./ProductDetailsPage.jsx";
