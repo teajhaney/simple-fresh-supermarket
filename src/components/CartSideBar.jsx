@@ -11,7 +11,6 @@ const CartSideBar = () => {
   const sideBarRef = useRef(null);
 
   useEffect(() => {
-    console.log("CartSideBar activeCartSideBar:", activeCartSideBar); // Debug
     const handleClickOutside = (event) => {
       if (
         cartRef.current &&
