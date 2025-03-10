@@ -5,8 +5,6 @@ import { TbExchange } from "react-icons/tb";
 
 export const gorceryProducts = [
   {
-    productDiscription:
-      "lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores earum impedit ut voluptatum deserunt laborum quasi laudantium mollitia id, sed at vero quo eius quos temporibus incidunt omnis vitae reiciendis.",
     buttonLabel: "Add to cart",
     bestSells: false,
     productName: "Fresh Banana",
@@ -20,8 +18,6 @@ export const gorceryProducts = [
     productCategory: ["Food, Beverages & Tobacco", "Fruits & Vegetables"],
   },
   {
-    productDiscription:
-      "lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores earum impedit ut voluptatum deserunt laborum quasi laudantium mollitia id, sed at vero quo eius quos temporibus incidunt omnis vitae reiciendis.",
     buttonLabel: "Add to cart",
     bestSells: false,
     productName: "Golden Pineapple",
@@ -35,8 +31,6 @@ export const gorceryProducts = [
     productCategory: ["Food, Beverages & Tobacco", "Fruits & Vegetables"],
   },
   {
-    productDiscription:
-      "lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores earum impedit ut voluptatum deserunt laborum quasi laudantium mollitia id, sed at vero quo eius quos temporibus incidunt omnis vitae reiciendis.",
     buttonLabel: "Sold out",
     bestSells: false,
     productName: "Cadbury 5 Star Chocolate",
@@ -50,8 +44,6 @@ export const gorceryProducts = [
     productCategory: ["Chocolate", "Food, Beverages & Tobacco"],
   },
   {
-    productDiscription:
-      "lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores earum impedit ut voluptatum deserunt laborum quasi laudantium mollitia id, sed at vero quo eius quos temporibus incidunt omnis vitae reiciendis.",
     buttonLabel: "Add to cart",
     bestSells: true,
     productName: "Beetroot",
@@ -65,8 +57,6 @@ export const gorceryProducts = [
     productCategory: ["Food, Beverages & Tobacco"],
   },
   {
-    productDiscription:
-      "lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores earum impedit ut voluptatum deserunt laborum quasi laudantium mollitia id, sed at vero quo eius quos temporibus incidunt omnis vitae reiciendis.",
     buttonLabel: "Add to cart",
     bestSells: false,
     productName: "Onion Flavour Potato",
@@ -80,8 +70,6 @@ export const gorceryProducts = [
     productCategory: "",
   },
   {
-    productDiscription:
-      "lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores earum impedit ut voluptatum deserunt laborum quasi laudantium mollitia id, sed at vero quo eius quos temporibus incidunt omnis vitae reiciendis.",
     buttonLabel: "Sold out",
     bestSells: false,
     productName: "Salted Instant Popcorn",
@@ -95,8 +83,6 @@ export const gorceryProducts = [
     productCategory: ["Food, Beverages & Tobacco", "Popcorn"],
   },
   {
-    productDiscription:
-      "lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores earum impedit ut voluptatum deserunt laborum quasi laudantium mollitia id, sed at vero quo eius quos temporibus incidunt omnis vitae reiciendis.",
     buttonLabel: "Add to cart",
     productName: "NutriChoice Digestive",
     popular: true,
@@ -109,8 +95,6 @@ export const gorceryProducts = [
     productCategory: ["Biscuits & Bakery"],
   },
   {
-    productDiscription:
-      "lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores earum impedit ut voluptatum deserunt laborum quasi laudantium mollitia id, sed at vero quo eius quos temporibus incidunt omnis vitae reiciendis.",
     buttonLabel: "Add to cart",
     bestSells: false,
     productName: "Haldiram's Sev Bhujia",
@@ -124,8 +108,6 @@ export const gorceryProducts = [
     productCategory: ["Food, Beverages & Tobacco", "Trail & Snack Mixes"],
   },
   {
-    productDiscription:
-      "lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores earum impedit ut voluptatum deserunt laborum quasi laudantium mollitia id, sed at vero quo eius quos temporibus incidunt omnis vitae reiciendis.",
     buttonLabel: "Add to cart",
     bestSells: false,
     productName: "Napolitanke Ljesnjak",
@@ -139,8 +121,6 @@ export const gorceryProducts = [
     productCategory: ["Baking Chocolate", "Food, Beverages & Tobacco"],
   },
   {
-    productDiscription:
-      "lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores earum impedit ut voluptatum deserunt laborum quasi laudantium mollitia id, sed at vero quo eius quos temporibus incidunt omnis vitae reiciendis.",
     buttonLabel: "Add to cart",
     bestSells: false,
     productName: "Golden Pineapple",
@@ -154,8 +134,6 @@ export const gorceryProducts = [
     productCategory: ["Food, Beverages & Tobacco", "Fruits & Vegetables"],
   },
   {
-    productDiscription:
-      "lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores earum impedit ut voluptatum deserunt laborum quasi laudantium mollitia id, sed at vero quo eius quos temporibus incidunt omnis vitae reiciendis.",
     buttonLabel: "Add to cart",
     bestSells: false,
     productName: "Fresh Kiwi",
@@ -169,8 +147,6 @@ export const gorceryProducts = [
     productCategory: ["Food, Beverages & Tobacco", "Fruits & Vegetables"],
   },
   {
-    productDiscription:
-      "lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores earum impedit ut voluptatum deserunt laborum quasi laudantium mollitia id, sed at vero quo eius quos temporibus incidunt omnis vitae reiciendis.",
     buttonLabel: "Add to cart",
     bestSells: false,
     productName: "Slurrp Millet Chocolate",
@@ -184,8 +160,6 @@ export const gorceryProducts = [
     productCategory: ["Food, Beverages & Tobacco", "Millet"],
   },
   {
-    productDiscription:
-      "lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores earum impedit ut voluptatum deserunt laborum quasi laudantium mollitia id, sed at vero quo eius quos temporibus incidunt omnis vitae reiciendis.",
     buttonLabel: "Add to cart",
     bestSells: false,
     productName: "Roast ground Coffee",
@@ -199,8 +173,6 @@ export const gorceryProducts = [
     productCategory: [""],
   },
   {
-    productDiscription:
-      "lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores earum impedit ut voluptatum deserunt laborum quasi laudantium mollitia id, sed at vero quo eius quos temporibus incidunt omnis vitae reiciendis.",
     buttonLabel: "Sold out",
     bestSells: false,
     productName: "Kellogg's Original Cereals",
@@ -218,8 +190,6 @@ export const gorceryProducts = [
     ],
   },
   {
-    productDiscription:
-      "lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores earum impedit ut voluptatum deserunt laborum quasi laudantium mollitia id, sed at vero quo eius quos temporibus incidunt omnis vitae reiciendis.",
     buttonLabel: "Add to cart",
     bestSells: true,
     productName: "Crushed Tomatoes",
@@ -233,8 +203,6 @@ export const gorceryProducts = [
     productCategory: ["Food, Beverages & Tobacco", "Tomato Paste"],
   },
   {
-    productDiscription:
-      "lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores earum impedit ut voluptatum deserunt laborum quasi laudantium mollitia id, sed at vero quo eius quos temporibus incidunt omnis vitae reiciendis.",
     buttonLabel: "Sold out",
     bestSells: false,
     productName: "Haldiram's Sev Bhujia",
@@ -248,8 +216,6 @@ export const gorceryProducts = [
     productCategory: ["Food, Beverages & Tobacco", "Trail & Snack Mixes"],
   },
   {
-    productDiscription:
-      "lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores earum impedit ut voluptatum deserunt laborum quasi laudantium mollitia id, sed at vero quo eius quos temporibus incidunt omnis vitae reiciendis.",
     buttonLabel: "Add to cart",
     bestSells: false,
     productName: "Fresh Banana",
@@ -263,8 +229,6 @@ export const gorceryProducts = [
     productCategory: ["Food, Beverages & Tobacco", "Fruits & Vegetables"],
   },
   {
-    productDiscription:
-      "lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores earum impedit ut voluptatum deserunt laborum quasi laudantium mollitia id, sed at vero quo eius quos temporibus incidunt omnis vitae reiciendis.",
     buttonLabel: "Add to cart",
     bestSells: true,
     productName: "Beetroot",
@@ -278,8 +242,6 @@ export const gorceryProducts = [
     productCategory: ["Food, Beverages & Tobacco"],
   },
   {
-    productDiscription:
-      "lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores earum impedit ut voluptatum deserunt laborum quasi laudantium mollitia id, sed at vero quo eius quos temporibus incidunt omnis vitae reiciendis.",
     buttonLabel: "Add to cart",
     bestSells: false,
     productName: "Fresh Kiwi",
@@ -293,8 +255,6 @@ export const gorceryProducts = [
     productCategory: ["Food, Beverages & Tobacco", "Fruits & Vegetables"],
   },
   {
-    productDiscription:
-      "lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores earum impedit ut voluptatum deserunt laborum quasi laudantium mollitia id, sed at vero quo eius quos temporibus incidunt omnis vitae reiciendis.",
     buttonLabel: "Add to cart",
     bestSells: false,
     productName: "Britannia Cheese Slices",
@@ -312,8 +272,6 @@ export const gorceryProducts = [
     ],
   },
   {
-    productDiscription:
-      "lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores earum impedit ut voluptatum deserunt laborum quasi laudantium mollitia id, sed at vero quo eius quos temporibus incidunt omnis vitae reiciendis.",
     buttonLabel: "Add to cart",
     bestSells: false,
     productName: "Blueberry Yogurt",
@@ -327,8 +285,6 @@ export const gorceryProducts = [
     productCategory: ["Food, Beverages & Tobacco", "Fruits & Vegetables"],
   },
   {
-    productDiscription:
-      "lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores earum impedit ut voluptatum deserunt laborum quasi laudantium mollitia id, sed at vero quo eius quos temporibus incidunt omnis vitae reiciendis.",
     buttonLabel: "Add to cart",
     bestSells: false,
     productName: "Fresh Apple",
@@ -342,8 +298,6 @@ export const gorceryProducts = [
     productCategory: ["Food, Beverages & Tobacco", "Fruits & Vegetables"],
   },
   {
-    productDiscription:
-      "lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores earum impedit ut voluptatum deserunt laborum quasi laudantium mollitia id, sed at vero quo eius quos temporibus incidunt omnis vitae reiciendis.",
     buttonLabel: "Sold out",
     bestSells: false,
     productName: "Amul Butter - 500g",
@@ -357,8 +311,6 @@ export const gorceryProducts = [
     productCategory: ["Food, Beverages & Tobacco", " Salted Butter"],
   },
   {
-    productDiscription:
-      "lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores earum impedit ut voluptatum deserunt laborum quasi laudantium mollitia id, sed at vero quo eius quos temporibus incidunt omnis vitae reiciendis.",
     buttonLabel: "Add to cart",
     bestSells: false,
     productName: "Blueberry Yogurt",
