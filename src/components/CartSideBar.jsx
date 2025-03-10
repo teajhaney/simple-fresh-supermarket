@@ -8,15 +8,10 @@ import { ButtonComponent } from "./export_components";
 const CartSideBar = () => {
   const { activeCartSideBar, setActiveCartSideBar } = useStateContext();
   const cartRef = useRef(null);
-  const sideBarRef = useRef(null);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (
-        cartRef.current &&
-        !cartRef.current.contains(event.target) &&
-        !sideBarRef.current.contains(event.target)
-      ) {
+      if (cartRef.current && !cartRef.current.contains(event.target)) {
         setActiveCartSideBar(false);
       }
     };
@@ -60,7 +55,6 @@ const CartSideBar = () => {
             </NavLink>{" "}
             to check out faster.
           </h2>
-          
         </div>
       </div>
     </div>
