@@ -14,7 +14,7 @@ import { NavLink } from "react-router-dom";
 ///////
 const Footer = () => {
   return (
-    <footer className="bg-accents h-fit mt-24 py-14 ">
+    <footer className="bg-accents h-fit  py-14 ">
       <div className="bodyContent flex flex-col gap-5">
         {/* First footer */}
         <div className="flex flex-col gap-5 md:grid md:grid-cols-3 lg:grid lg:grid-cols-5 transition-all duration-500 ease-in-out">

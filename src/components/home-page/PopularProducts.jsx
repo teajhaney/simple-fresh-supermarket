@@ -4,10 +4,11 @@ import { gorceryProducts, productListVariantsXright } from "../../constants";
 import { ButtonComponent } from "./../export_components";
 import { FaStar } from "react-icons/fa";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const PopularProducts = () => {
+  const navigate = useNavigate();
   const scrollRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(1);
   const handleScroll = (direction) => {
@@ -19,7 +20,10 @@ const PopularProducts = () => {
       });
     }
   };
-
+  // Navigate to product details page with data
+  const handleProductClick = (product) => {
+    navigate("/products-details-page", { state: { product } });
+  };
   return (
     <section className="mt-20  flex flex-col gap-3">
       <h1 className="sectionHeadings">Popular Products</h1>
@@ -35,10 +39,10 @@ const PopularProducts = () => {
           {gorceryProducts
             .filter((product) => product.popular)
             .map((gorceryProduct, index) => (
-              <NavLink
-                to="/products-details-page"
+              <div
                 key={index}
-                className={"group"}>
+                onClick={() => handleProductClick(gorceryProduct)}
+                className="cursor-pointer group">
                 <div className=" h-auto w-100  lg:w-full flex-shrink-0 bg-white  flex flex-col gap-2  p-4 rounded-lg  border border-accents group-hover:border-primary transition-all duration-500 ease-in-out">
                   <img
                     src={gorceryProduct.productImage}
@@ -68,7 +72,7 @@ const PopularProducts = () => {
                     className="bg-primary text-[10px]"
                   />
                 </div>
-              </NavLink>
+              </div>
             ))}
         </div>
 

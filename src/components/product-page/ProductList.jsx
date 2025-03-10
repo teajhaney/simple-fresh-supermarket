@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import { gorceryProducts, productListVariantsXright } from "../../constants";
 import { ButtonComponent } from "../export_components";
 import { FaStar } from "react-icons/fa";
-import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { IoIosArrowForward } from "react-icons/io";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 
 const ProductList = () => {
+  const navigate = useNavigate();
   //  Number of products per page
   const productsPerPage = 8;
 
@@ -21,7 +22,10 @@ const ProductList = () => {
   const startIndex = currentPage * productsPerPage;
   const endIndex = startIndex + productsPerPage;
   const displayedProducts = gorceryProducts.slice(startIndex, endIndex);
-
+  // Navigate to product details page with data
+  const handleProductClick = (product) => {
+    navigate("/products-details-page", { state: { product } });
+  };
 
   return (
     <div className="md:col-span-4 lg:col-span-9 flex-col ">
@@ -41,10 +45,10 @@ const ProductList = () => {
           exit="hidden"
           className="grid grid-cols-2 lg:grid-cols-4 gap-2 ">
           {displayedProducts.map((displayedProduct, index) => (
-            <NavLink
-              to="/products-details-page"
+            <div
               key={index}
-              className={"group"}>
+              onClick={() => handleProductClick(displayedProduct)}
+              className="cursor-pointer group">
               <div className=" h-90   lg:w-full flex-shrink-0 bg-white  flex flex-col gap-2  p-4 rounded-lg  border border-accents group-hover:border-primary transition-all duration-500 ease-in-out">
                 <img
                   src={displayedProduct.productImage}
@@ -76,7 +80,7 @@ const ProductList = () => {
                   className="bg-primary text-[12px] font-bold"
                 />
               </div>
-            </NavLink>
+            </div>
           ))}
         </motion.div>
       </div>

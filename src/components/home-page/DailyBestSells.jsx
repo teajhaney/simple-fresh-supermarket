@@ -7,10 +7,15 @@ import {
 } from "../../constants";
 import { ButtonComponent } from "../export_components";
 import { FaStar } from "react-icons/fa";
-import { NavLink } from "react-router-dom";
+import { useNavigate, NavLink } from "react-router-dom";
 import {motion} from "framer-motion"
 
 const DailyBestSells = () => {
+  const navigate = useNavigate();
+
+  const handleProductClick = (products) => {
+    navigate('/products-details-page', {state:{products}});
+  };
   return (
     <section className="h-fit mt-24  ">
       <motion.div
@@ -38,10 +43,10 @@ const DailyBestSells = () => {
             {gorceryProducts
               .filter((product) => product.bestSells)
               .map((gorceryProduct, index) => (
-                <NavLink
-                  to="/products-details-page"
+                <div
+                  onClick={() => handleProductClick(gorceryProduct)}
                   key={index}
-                  className={"group"}>
+                  className={"group cursor-pointer"}>
                   <div
                     className="bg-white flex flex-col gap-2 p-4 rounded-lg border border-accents group-hover:border-primary transition-all duration-500 ease-in-out
                   h-auto">
@@ -84,7 +89,7 @@ const DailyBestSells = () => {
                       className="bg-primary text-[10px]"
                     />
                   </div>
-                </NavLink>
+                </div>
               ))}
           </div>
         </div>

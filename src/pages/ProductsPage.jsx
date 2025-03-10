@@ -11,7 +11,7 @@ import { gorceryProducts } from "../constants";
 const ProductsPage = () => {
   const { setActiveFilterSideBar } = useStateContext();
   return (
-    <div className="bodyContent mt-8">
+    <div className="bodyContent my-8">
       <h1 className="text-sm font-semibold">
         <span className="text-primary">
           <NavLink to="/">Home</NavLink>

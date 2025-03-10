@@ -5,6 +5,8 @@ import { TbExchange } from "react-icons/tb";
 
 export const gorceryProducts = [
   {
+    productDiscription:
+      "lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores earum impedit ut voluptatum deserunt laborum quasi laudantium mollitia id, sed at vero quo eius quos temporibus incidunt omnis vitae reiciendis.",
     buttonLabel: "Add to cart",
     bestSells: false,
     productName: "Fresh Banana",
@@ -18,6 +20,8 @@ export const gorceryProducts = [
     productCategory: ["Food, Beverages & Tobacco", "Fruits & Vegetables"],
   },
   {
+    productDiscription:
+      "lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores earum impedit ut voluptatum deserunt laborum quasi laudantium mollitia id, sed at vero quo eius quos temporibus incidunt omnis vitae reiciendis.",
     buttonLabel: "Add to cart",
     bestSells: false,
     productName: "Golden Pineapple",
@@ -31,6 +35,8 @@ export const gorceryProducts = [
     productCategory: ["Food, Beverages & Tobacco", "Fruits & Vegetables"],
   },
   {
+    productDiscription:
+      "lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores earum impedit ut voluptatum deserunt laborum quasi laudantium mollitia id, sed at vero quo eius quos temporibus incidunt omnis vitae reiciendis.",
     buttonLabel: "Sold out",
     bestSells: false,
     productName: "Cadbury 5 Star Chocolate",
@@ -44,6 +50,8 @@ export const gorceryProducts = [
     productCategory: ["Chocolate", "Food, Beverages & Tobacco"],
   },
   {
+    productDiscription:
+      "lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores earum impedit ut voluptatum deserunt laborum quasi laudantium mollitia id, sed at vero quo eius quos temporibus incidunt omnis vitae reiciendis.",
     buttonLabel: "Add to cart",
     bestSells: true,
     productName: "Beetroot",
@@ -57,6 +65,8 @@ export const gorceryProducts = [
     productCategory: ["Food, Beverages & Tobacco"],
   },
   {
+    productDiscription:
+      "lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores earum impedit ut voluptatum deserunt laborum quasi laudantium mollitia id, sed at vero quo eius quos temporibus incidunt omnis vitae reiciendis.",
     buttonLabel: "Add to cart",
     bestSells: false,
     productName: "Onion Flavour Potato",
@@ -70,6 +80,8 @@ export const gorceryProducts = [
     productCategory: "",
   },
   {
+    productDiscription:
+      "lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores earum impedit ut voluptatum deserunt laborum quasi laudantium mollitia id, sed at vero quo eius quos temporibus incidunt omnis vitae reiciendis.",
     buttonLabel: "Sold out",
     bestSells: false,
     productName: "Salted Instant Popcorn",
@@ -83,6 +95,8 @@ export const gorceryProducts = [
     productCategory: ["Food, Beverages & Tobacco", "Popcorn"],
   },
   {
+    productDiscription:
+      "lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores earum impedit ut voluptatum deserunt laborum quasi laudantium mollitia id, sed at vero quo eius quos temporibus incidunt omnis vitae reiciendis.",
     buttonLabel: "Add to cart",
     productName: "NutriChoice Digestive",
     popular: true,
@@ -95,6 +109,8 @@ export const gorceryProducts = [
     productCategory: ["Biscuits & Bakery"],
   },
   {
+    productDiscription:
+      "lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores earum impedit ut voluptatum deserunt laborum quasi laudantium mollitia id, sed at vero quo eius quos temporibus incidunt omnis vitae reiciendis.",
     buttonLabel: "Add to cart",
     bestSells: false,
     productName: "Haldiram's Sev Bhujia",
@@ -108,6 +124,8 @@ export const gorceryProducts = [
     productCategory: ["Food, Beverages & Tobacco", "Trail & Snack Mixes"],
   },
   {
+    productDiscription:
+      "lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores earum impedit ut voluptatum deserunt laborum quasi laudantium mollitia id, sed at vero quo eius quos temporibus incidunt omnis vitae reiciendis.",
     buttonLabel: "Add to cart",
     bestSells: false,
     productName: "Napolitanke Ljesnjak",
@@ -121,6 +139,8 @@ export const gorceryProducts = [
     productCategory: ["Baking Chocolate", "Food, Beverages & Tobacco"],
   },
   {
+    productDiscription:
+      "lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores earum impedit ut voluptatum deserunt laborum quasi laudantium mollitia id, sed at vero quo eius quos temporibus incidunt omnis vitae reiciendis.",
     buttonLabel: "Add to cart",
     bestSells: false,
     productName: "Golden Pineapple",
@@ -134,6 +154,8 @@ export const gorceryProducts = [
     productCategory: ["Food, Beverages & Tobacco", "Fruits & Vegetables"],
   },
   {
+    productDiscription:
+      "lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores earum impedit ut voluptatum deserunt laborum quasi laudantium mollitia id, sed at vero quo eius quos temporibus incidunt omnis vitae reiciendis.",
     buttonLabel: "Add to cart",
     bestSells: false,
     productName: "Fresh Kiwi",
@@ -147,6 +169,8 @@ export const gorceryProducts = [
     productCategory: ["Food, Beverages & Tobacco", "Fruits & Vegetables"],
   },
   {
+    productDiscription:
+      "lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores earum impedit ut voluptatum deserunt laborum quasi laudantium mollitia id, sed at vero quo eius quos temporibus incidunt omnis vitae reiciendis.",
     buttonLabel: "Add to cart",
     bestSells: false,
     productName: "Slurrp Millet Chocolate",
@@ -160,6 +184,8 @@ export const gorceryProducts = [
     productCategory: ["Food, Beverages & Tobacco", "Millet"],
   },
   {
+    productDiscription:
+      "lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores earum impedit ut voluptatum deserunt laborum quasi laudantium mollitia id, sed at vero quo eius quos temporibus incidunt omnis vitae reiciendis.",
     buttonLabel: "Add to cart",
     bestSells: false,
     productName: "Roast ground Coffee",
@@ -173,6 +199,8 @@ export const gorceryProducts = [
     productCategory: [""],
   },
   {
+    productDiscription:
+      "lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores earum impedit ut voluptatum deserunt laborum quasi laudantium mollitia id, sed at vero quo eius quos temporibus incidunt omnis vitae reiciendis.",
     buttonLabel: "Sold out",
     bestSells: false,
     productName: "Kellogg's Original Cereals",
@@ -190,6 +218,8 @@ export const gorceryProducts = [
     ],
   },
   {
+    productDiscription:
+      "lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores earum impedit ut voluptatum deserunt laborum quasi laudantium mollitia id, sed at vero quo eius quos temporibus incidunt omnis vitae reiciendis.",
     buttonLabel: "Add to cart",
     bestSells: true,
     productName: "Crushed Tomatoes",
@@ -203,6 +233,8 @@ export const gorceryProducts = [
     productCategory: ["Food, Beverages & Tobacco", "Tomato Paste"],
   },
   {
+    productDiscription:
+      "lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores earum impedit ut voluptatum deserunt laborum quasi laudantium mollitia id, sed at vero quo eius quos temporibus incidunt omnis vitae reiciendis.",
     buttonLabel: "Sold out",
     bestSells: false,
     productName: "Haldiram's Sev Bhujia",
@@ -216,6 +248,8 @@ export const gorceryProducts = [
     productCategory: ["Food, Beverages & Tobacco", "Trail & Snack Mixes"],
   },
   {
+    productDiscription:
+      "lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores earum impedit ut voluptatum deserunt laborum quasi laudantium mollitia id, sed at vero quo eius quos temporibus incidunt omnis vitae reiciendis.",
     buttonLabel: "Add to cart",
     bestSells: false,
     productName: "Fresh Banana",
@@ -229,6 +263,8 @@ export const gorceryProducts = [
     productCategory: ["Food, Beverages & Tobacco", "Fruits & Vegetables"],
   },
   {
+    productDiscription:
+      "lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores earum impedit ut voluptatum deserunt laborum quasi laudantium mollitia id, sed at vero quo eius quos temporibus incidunt omnis vitae reiciendis.",
     buttonLabel: "Add to cart",
     bestSells: true,
     productName: "Beetroot",
@@ -242,6 +278,8 @@ export const gorceryProducts = [
     productCategory: ["Food, Beverages & Tobacco"],
   },
   {
+    productDiscription:
+      "lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores earum impedit ut voluptatum deserunt laborum quasi laudantium mollitia id, sed at vero quo eius quos temporibus incidunt omnis vitae reiciendis.",
     buttonLabel: "Add to cart",
     bestSells: false,
     productName: "Fresh Kiwi",
@@ -255,6 +293,8 @@ export const gorceryProducts = [
     productCategory: ["Food, Beverages & Tobacco", "Fruits & Vegetables"],
   },
   {
+    productDiscription:
+      "lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores earum impedit ut voluptatum deserunt laborum quasi laudantium mollitia id, sed at vero quo eius quos temporibus incidunt omnis vitae reiciendis.",
     buttonLabel: "Add to cart",
     bestSells: false,
     productName: "Britannia Cheese Slices",
@@ -272,6 +312,8 @@ export const gorceryProducts = [
     ],
   },
   {
+    productDiscription:
+      "lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores earum impedit ut voluptatum deserunt laborum quasi laudantium mollitia id, sed at vero quo eius quos temporibus incidunt omnis vitae reiciendis.",
     buttonLabel: "Add to cart",
     bestSells: false,
     productName: "Blueberry Yogurt",
@@ -285,6 +327,8 @@ export const gorceryProducts = [
     productCategory: ["Food, Beverages & Tobacco", "Fruits & Vegetables"],
   },
   {
+    productDiscription:
+      "lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores earum impedit ut voluptatum deserunt laborum quasi laudantium mollitia id, sed at vero quo eius quos temporibus incidunt omnis vitae reiciendis.",
     buttonLabel: "Add to cart",
     bestSells: false,
     productName: "Fresh Apple",
@@ -298,6 +342,8 @@ export const gorceryProducts = [
     productCategory: ["Food, Beverages & Tobacco", "Fruits & Vegetables"],
   },
   {
+    productDiscription:
+      "lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores earum impedit ut voluptatum deserunt laborum quasi laudantium mollitia id, sed at vero quo eius quos temporibus incidunt omnis vitae reiciendis.",
     buttonLabel: "Sold out",
     bestSells: false,
     productName: "Amul Butter - 500g",
@@ -311,6 +357,8 @@ export const gorceryProducts = [
     productCategory: ["Food, Beverages & Tobacco", " Salted Butter"],
   },
   {
+    productDiscription:
+      "lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores earum impedit ut voluptatum deserunt laborum quasi laudantium mollitia id, sed at vero quo eius quos temporibus incidunt omnis vitae reiciendis.",
     buttonLabel: "Add to cart",
     bestSells: false,
     productName: "Blueberry Yogurt",
@@ -499,3 +547,101 @@ export const productCategories = [
   "Tomato Paste",
   "Trail & Snack Mixes",
 ];
+
+export const blogs = [
+  {
+    image:
+      "https://freshcart77.myshopify.com/cdn/shop/articles/blog-img-5_ef2e8e72-7261-4e05-8cca-f98d7a235078.jpg?v=1738817045&width=533",
+    subHeading: "Recipes",
+    heading: "No-Boil Baked Penne with Meatballs.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elitaenean tincidunt ellentesque ligula in ultrices congue.",
+    date: "12 August 2024",
+    authur: "Jane smith",
+  },
+
+  {
+    image:
+      "https://freshcart77.myshopify.com/cdn/shop/articles/blogImage_84c9a2db-9c4e-4617-bb6d-2e86bab88f00.jpg?v=1738766490&width=533",
+    subHeading: "Retailer",
+    heading: "Red Chile Chicken Tacos with Creamy Corn",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elitaenean sit amet tincidunt ellentesque aliquet ligula in ultrices congue.",
+    date: "12 August 2024",
+    authur: "Jane smith",
+  },
+
+  {
+    image:
+      "https://freshcart77.myshopify.com/cdn/shop/articles/blog-img-9_fadd4fe1-1127-431d-9265-e9cb0b85a84e.jpg?v=1738816923&width=533",
+    subHeading: "Retailer",
+    heading: "No-Boil Baked Penne with Chicken",
+    description:
+      "Nulla consectetur sapien a libero imperdiet posuere. Donec sollicitudin, sollicitudin tristique, metus eros euismod tortor ",
+    date: "12 August 2024",
+    authur: "Jane smith",
+  },
+  {
+    image:
+      "https://freshcart77.myshopify.com/cdn/shop/articles/blog-img-8_09c95a49-1b7e-49c7-b3eb-ea34ed59bd59.jpg?v=1738816981&width=533",
+    subHeading: "Compsny",
+    heading: "Basic + Awesome Italy Cheese Soup",
+    description:
+      "Nulla consectetur sapien a libero imperdiet posuere. Donec sollicitudin, sit amet sollicitudin, metus eros euismod tortor",
+    date: "12 August 2024",
+    authur: "Jane smith",
+  },
+  {
+    image:
+      "https://freshcart77.myshopify.com/cdn/shop/articles/blog-img-4_2ba8ac75-72e1-4d6d-bf90-36a6cbb00911.jpg?v=1738766530&width=533",
+    subHeading: "Recipies",
+    heading: "Red Chile Chicken Tacos with Creamy Corn.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elitaenean sit amet tincidunt ellentesque aliquet ligula in ultrices congue",
+    date: "12 August 2024",
+    authur: "Jane smith",
+  },
+  {
+    image:
+      "https://freshcart77.myshopify.com/cdn/shop/articles/blog-img-7_abc115c5-fd14-4874-b940-84440be3f362.jpg?v=1738766536&width=533",
+    subHeading: "Company",
+    heading: "Spicy Shrimp Tacos Garlic Cilantro Lime Slaw",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elitaenean sit amet tincidunt ellentesque aliquet ligula in ultrices congue.",
+    date: "12 August 2024",
+    authur: "Jane smith",
+  },
+  {
+    image:
+      "https://freshcart77.myshopify.com/cdn/shop/articles/blog-img-2_244b5a5a-e43f-49df-a353-54254f3594ac.jpg?v=1738817111&width=533",
+    subHeading: "Recipies",
+    heading: "No-Boil Baked Penne with Meatballs.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elitaenean sit amet tincidunt ellentesque aliquet ligula in ultrices congue.",
+    date: "12 August 2024",
+    authur: "Jane smith",
+  },
+  {
+    image:
+      "https://freshcart77.myshopify.com/cdn/shop/articles/blog-img-2_1273201a-85ee-424e-a55f-64559222bf71.jpg?v=1738816340&width=533",
+    subHeading: "Recipies",
+    heading: "Cashew Butter Chocolate Chip Zucchini Bars",
+    description:
+      "goy et eros dapibus, facilisis ipsum sit amet, tempor dolor. Donec sed nisi gravida, molestie dolor molestie, congue sapien.",
+    date: "12 August 2024",
+    authur: "Jane smith",
+  },
+  {
+    image:
+      "https://freshcart77.myshopify.com/cdn/shop/articles/blog-img-1_951e1507-b20a-4ebb-8726-1a5b36bb81a8.jpg?v=1738766478",
+    subHeading: "Company",
+    heading: "Garlic Cream Bucatini with Peas and Asparagus",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elitaenean sit amet tincidunt ellentesque aliquet ligula in ultrices congue.",
+    date: "12 August 2024",
+    authur: "Jane smith",
+  },
+];
+
+export const blogFirstImage =
+  "https://freshcart77.myshopify.com/cdn/shop/articles/blog-img-8_09c95a49-1b7e-49c7-b3eb-ea34ed59bd59.jpg?v=1738816981&width=533";
