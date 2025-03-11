@@ -1,54 +1,30 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 const OptionMenu = ({ navItem, navDropDownItems }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const dropdownRef = useRef(null);
 
   // Check if any dropdown item is active
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setIsOpen(false);
-      }
-    };
 
-    if (isOpen) {
-      window.addEventListener("mousedown", handleClickOutside);
-    }
-
-    return () => {
-      window.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [isOpen]);
   return (
-    <div>
+    <div className="relative">
       {/* Select Box */}
       <div
-        className="relative  gap-3 items-center  p-3 rounded-md  cursor-pointer"
-        ref={dropdownRef}
-        onMouseEnter={() => setIsOpen(!isOpen)}
-        onMouseLeave={() => setIsOpen(!isOpen)}
-        // onClick={() => setIsOpen(!isOpen)}
-      >
+        className="gap-3 items-center p-3 rounded-md cursor-pointer"
+        onMouseEnter={() => setIsOpen(true)}
+        onMouseLeave={() => setIsOpen(false)}>
         <span>{navItem}</span>
-
         {/* Dropdown Options */}
-
         {isOpen && (
-          <ul className="absolute bg-white border-2 border-accents rounded-md my-2 shadow-md z-10">
+          <ul className="absolute bg-white border-2 border-accents rounded-md my-2 shadow-md z-50 min-w-24">
             {navDropDownItems.map((navDropDownItem) => (
               <li
                 key={navDropDownItem.path}
-                onClick={() => {
-                  console.log(navDropDownItem.path);
-                  setIsOpen(false); // Close dropdown on click
-                }}
-                className="p-1 hover:bg-accents text-sm text-tertiary rounded-md mx-3 my-2 cursor-pointer transition">
+                className="p-1 hover:bg-accents rounded-md mx-3 my-2 cursor-pointer transition">
                 <NavLink
                   to={navDropDownItem.path}
                   className={({ isActive }) =>
-                    isActive ? "text-primary font-bold" : ""
+                    isActive ? "block text-primary " : "block text-tertiary"
                   }>
                   {navDropDownItem.title}
                 </NavLink>
@@ -62,5 +38,3 @@ const OptionMenu = ({ navItem, navDropDownItems }) => {
 };
 
 export default OptionMenu;
-
-

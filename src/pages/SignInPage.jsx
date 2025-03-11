@@ -74,22 +74,24 @@ const SignInPage = () => {
           variants={productListVariantsXleft}
           initial="hidden"
           animate="visible"
+          className="w-full bg-amber-700"
           exit="hidden">
-          <div className="w-full">
+       
             <img
               src="https://freshcart77.myshopify.com/cdn/shop/files/signin.png?v=1724218593"
               alt="Sign in illustration"
               className="object-cover"
             />
-          </div>
+        
         </motion.div>
         {/* form */}
         <motion.div
           variants={productListVariantsXright}
           initial="hidden"
           animate="visible"
+          className="flex flex-col items-center w-full justify-center"
           exit="hidden">
-          <div className="flex flex-col items-center w-full justify-center">
+         
             {/* Form Component */}
             <form
               className="bg-white rounded-lg border-2 border-primary px-8 p-10 w-96 lg:w-full  flex flex-col gap-3"
@@ -149,7 +151,7 @@ const SignInPage = () => {
                 Register
               </NavLink>
             </form>
-          </div>
+  
         </motion.div>
       </div>
     </div>
