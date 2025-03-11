@@ -5,6 +5,7 @@ const OptionMenu = ({ navItem, navDropDownItems }) => {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
 
+  // Check if any dropdown item is active
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -26,6 +27,8 @@ const OptionMenu = ({ navItem, navDropDownItems }) => {
       <div
         className="relative  gap-3 items-center  p-3 rounded-md  cursor-pointer"
         ref={dropdownRef}
+        // onMouseEnter={() => setIsOpen(true)}
+        // onMouseLeave={() => setIsOpen(false)}
         onClick={() => setIsOpen(!isOpen)}>
         <span>{navItem}</span>
       </div>
@@ -33,17 +36,18 @@ const OptionMenu = ({ navItem, navDropDownItems }) => {
       {isOpen && (
         <ul className="absolute  bg-white border-2 border-accents  rounded-md my-2 shadow-md z-10">
           {navDropDownItems.map((navDropDownItem) => (
-            <NavLink
+            <li
+              onClick={() => console.log(navDropDownItem.path)}
               key={navDropDownItem.path}
-              to={navDropDownItem.path}
-              onClick={() => setIsOpen(false)}
-              className={({ isActive }) =>
-                isActive ? "text-primary font-bold" : ""
-              }>
-              <li className="p-1 hover:bg-accents text-sm text-tertiary rounded-md mx-3 my-2 cursor-pointer transition">
+              className="p-1 hover:bg-accents text-sm text-tertiary rounded-md mx-3 my-2 cursor-pointer transition">
+              <NavLink
+                to={navDropDownItem.path}
+                className={({ isActive }) =>
+                  isActive ? "text-primary font-bold" : ""
+                }>
                 {navDropDownItem.title}
-              </li>
-            </NavLink>
+              </NavLink>
+            </li>
           ))}
         </ul>
       )}
@@ -52,5 +56,3 @@ const OptionMenu = ({ navItem, navDropDownItems }) => {
 };
 
 export default OptionMenu;
-
-

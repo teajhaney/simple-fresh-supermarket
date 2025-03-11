@@ -136,6 +136,7 @@ const NavigationBar = () => {
             <li>
               <OptionMenu navItem={"Products"} navDropDownItems={shops} />
             </li>
+            {/* account */}
             <li>
               {" "}
               <OptionMenu navItem={"Account"} navDropDownItems={accounts} />

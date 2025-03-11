@@ -24,17 +24,17 @@ const SideBarNav = () => {
   }, [setActiveSideBarNav]);
 
   // Prevent scrolling when sidebar is open
-  // useEffect(() => {
-  //   if (activeSideBarNav) {
-  //     document.body.style.overflow = "hidden";
-  //   } else {
-  //     document.body.style.overflow = "";
-  //   }
+  useEffect(() => {
+    if (activeSideBarNav) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
 
-  //   return () => {
-  //     document.body.style.overflow = "";
-  //   };
-  // }, [activeSideBarNav]);
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [activeSideBarNav]);
   ///////
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -57,13 +57,13 @@ const SideBarNav = () => {
   const viewHeight = parent.outerHeight;
   return (
     <div
-      className={`absolute left-0 w-72 z-30 h-screen bg-white lg:hidden border-r-2 border-accents flex flex-col justify-between  transition-transform duration-300 ease-in-out transform ${
+      className={`fixed left-0 w-72 z-30 h-200 bg-white lg:hidden border-r-2 border-accents flex flex-col  transition-transform duration-300 ease-in-out transform ${
         activeSideBarNav ? "translate-x-0" : "-translate-x-full"
       }`}
       style={{ height: viewHeight }}
       ref={sideBarRef}>
       {/* //sidebar links */}
-      <div className="flex flex-col  gap-3 p-5 text-secondary  bg-red-500 ">
+      <div className="flex flex-col  gap-3 p-5 text-secondary">
         <NavLink
           to="/"
           onClick={() => setActiveSideBarNav((prevState) => !prevState)}
@@ -98,7 +98,7 @@ const SideBarNav = () => {
         </NavLink>
       </div>
       {/* buttom */}
-      <div className="p-5 flex flex-col gap-3  text-secondary bg-accents  ">
+      <div className="  p-5 flex flex-col gap-3  text-secondary bg-accents  ">
         <NavLink
           to="/Sign-in"
           className={({ isActive }) =>
