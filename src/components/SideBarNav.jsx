@@ -7,7 +7,35 @@ import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 const SideBarNav = () => {
   const { activeSideBarNav, setActiveSideBarNav } = useStateContext();
   const sideBarRef = useRef(null);
+  // Close sidebar when screen size is lg or larger
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) {
+        setActiveSideBarNav(false); // Force sidebar to be inactive on large screens
+      }
+    };
 
+    handleResize(); // Run on mount to check initial screen size
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [setActiveSideBarNav]);
+
+  // Prevent scrolling when sidebar is open
+  // useEffect(() => {
+  //   if (activeSideBarNav) {
+  //     document.body.style.overflow = "hidden";
+  //   } else {
+  //     document.body.style.overflow = "";
+  //   }
+
+  //   return () => {
+  //     document.body.style.overflow = "";
+  //   };
+  // }, [activeSideBarNav]);
+  ///////
   useEffect(() => {
     const handleClickOutside = (event) => {
       // Only close sidebar if cart is not active and click is outside sidebar
@@ -24,14 +52,18 @@ const SideBarNav = () => {
       window.removeEventListener("mousedown", handleClickOutside);
     };
   }, [activeSideBarNav, setActiveSideBarNav]);
+
+  ///height
+  const viewHeight = parent.outerHeight;
   return (
     <div
-      className={`fixed left-0 w-72 h-full bg-white z-30 lg:hidden border-r-2 border-accents flex flex-col overflow-hidden transition-transform duration-300 ease-in-out transform ${
+      className={`absolute left-0 w-72 z-30 h-screen bg-white lg:hidden border-r-2 border-accents flex flex-col justify-between  transition-transform duration-300 ease-in-out transform ${
         activeSideBarNav ? "translate-x-0" : "-translate-x-full"
       }`}
+      style={{ height: viewHeight }}
       ref={sideBarRef}>
-      <div className="flex flex-col  gap-3 mt-5 mx-5 text-secondary">
-        {/* //sidebar links */}
+      {/* //sidebar links */}
+      <div className="flex flex-col  gap-3 p-5 text-secondary  bg-red-500 ">
         <NavLink
           to="/"
           onClick={() => setActiveSideBarNav((prevState) => !prevState)}
@@ -65,7 +97,8 @@ const SideBarNav = () => {
           <div className="w-full  px-2 py-3  ">Blog</div>
         </NavLink>
       </div>
-      <div className="flex flex-col gap-5 px-5 py-5 text-secondary  bg-accents">
+      {/* buttom */}
+      <div className="p-5 flex flex-col gap-3  text-secondary bg-accents  ">
         <NavLink
           to="/Sign-in"
           className={({ isActive }) =>
@@ -74,7 +107,6 @@ const SideBarNav = () => {
           onClick={() => setActiveSideBarNav((prevState) => !prevState)}>
           <div className="flex gap-3 items-center text-md">
             <CiUser />
-
             <h1>Log in</h1>
           </div>
         </NavLink>
