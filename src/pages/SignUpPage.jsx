@@ -1,6 +1,12 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-
+import { motion } from "framer-motion";
+import {
+  productListVariantsXright,
+  productListVariantsXleft,
+} from "../constants";
+/////
 const SignUpPage = () => {
   const navigate = useNavigate();
 
@@ -66,7 +72,7 @@ const SignUpPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
-      console.log("Signup successful:", formData);
+      // console.log("Signup successful:", formData);
       navigate("/"); // Redirect to the next page
     }
   };
@@ -74,122 +80,140 @@ const SignUpPage = () => {
   return (
     <div className="bodyContent flex justify-center items-center">
       <div className="flex flex-col md:flex-row gap-20 my-24 justify-center items-center">
-        <div className=" w-full">
-          <img
-            src="https://freshcart77.myshopify.com/cdn/shop/files/signin.png?v=1724218593"
-            alt="Sign up illustration"
-            className="object-cover"
-          />
-        </div>
+        <motion.div
+          variants={productListVariantsXleft}
+          initial="hidden"
+          animate="visible"
+          exit="hidden">
+          <div className=" w-full">
+            <img
+              src="https://freshcart77.myshopify.com/cdn/shop/files/signin.png?v=1724218593"
+              alt="Sign up illustration"
+              className="object-cover"
+            />
+          </div>
+        </motion.div>
         {/* form */}
-        <div className="flex flex-col items-center w-full justify-center">
-          {/* Form Component */}
-          <form
-            className="bg-white rounded-lg border-2 border-primary px-8 p-10 w-96 lg:w-full flex flex-col gap-3"
-            onSubmit={handleSubmit}>
-            <h2 className="text-2xl text-tertiary font-bold mb-4">Register</h2>
+        <motion.div
+          variants={productListVariantsXright}
+          initial="hidden"
+          animate="visible"
+          exit="hidden">
+          <div className="flex flex-col items-center w-full justify-center">
+            {/* Form Component */}
+            <form
+              className="bg-white rounded-lg border-2 border-primary px-8 p-10 w-96 lg:w-full flex flex-col gap-3"
+              onSubmit={handleSubmit}>
+              <h2 className="text-2xl text-tertiary font-bold mb-4">
+                Register
+              </h2>
 
-            {/* First Name Field */}
-            <div className="mb-4">
-              <label className="block text-tertiary text-sm font-bold mb-2">
-                First Name
-              </label>
-              <input
-                type="text"
-                name="firstName"
-                value={formData.firstName}
-                onChange={handleChange}
-                className="border border-accent outline-primary rounded py-2 px-3 text-tertiary w-full"
-                placeholder="Enter your first name"
-              />
-              {errors.firstName && (
-                <p className="text-red-500 text-xs italic">
-                  {errors.firstName}
-                </p>
-              )}
-            </div>
+              {/* First Name Field */}
+              <div className="mb-4">
+                <label className="block text-tertiary text-sm font-bold mb-2">
+                  First Name
+                </label>
+                <input
+                  type="text"
+                  name="firstName"
+                  value={formData.firstName}
+                  onChange={handleChange}
+                  className="border border-accent outline-primary rounded py-2 px-3 text-tertiary w-full"
+                  placeholder="Enter your first name"
+                />
+                {errors.firstName && (
+                  <p className="text-red-500 text-xs italic">
+                    {errors.firstName}
+                  </p>
+                )}
+              </div>
 
-            {/* Last Name Field */}
-            <div className="mb-4">
-              <label className="block text-tertiary text-sm font-bold mb-2">
-                Last Name
-              </label>
-              <input
-                type="text"
-                name="lastName"
-                value={formData.lastName}
-                onChange={handleChange}
-                className="border border-accent outline-primary rounded py-2 px-3 text-tertiary w-full"
-                placeholder="Enter your last name"
-              />
-              {errors.lastName && (
-                <p className="text-red-500 text-xs italic">{errors.lastName}</p>
-              )}
-            </div>
+              {/* Last Name Field */}
+              <div className="mb-4">
+                <label className="block text-tertiary text-sm font-bold mb-2">
+                  Last Name
+                </label>
+                <input
+                  type="text"
+                  name="lastName"
+                  value={formData.lastName}
+                  onChange={handleChange}
+                  className="border border-accent outline-primary rounded py-2 px-3 text-tertiary w-full"
+                  placeholder="Enter your last name"
+                />
+                {errors.lastName && (
+                  <p className="text-red-500 text-xs italic">
+                    {errors.lastName}
+                  </p>
+                )}
+              </div>
 
-            {/* Email Field */}
-            <div className="mb-4">
-              <label className="block text-tertiary text-sm font-bold mb-2">
-                Email
-              </label>
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                className="border border-accent outline-primary rounded py-2 px-3 text-tertiary w-full"
-                placeholder="Enter your email"
-              />
-              {errors.email && (
-                <p className="text-red-500 text-xs italic">{errors.email}</p>
-              )}
-            </div>
+              {/* Email Field */}
+              <div className="mb-4">
+                <label className="block text-tertiary text-sm font-bold mb-2">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="border border-accent outline-primary rounded py-2 px-3 text-tertiary w-full"
+                  placeholder="Enter your email"
+                />
+                {errors.email && (
+                  <p className="text-red-500 text-xs italic">{errors.email}</p>
+                )}
+              </div>
 
-            {/* Password Field */}
-            <div className="mb-4">
-              <label className="block text-tertiary text-sm font-bold mb-2">
-                Password
-              </label>
-              <input
-                type="password"
-                name="password"
-                value={formData.password}
-                onChange={handleChange}
-                className="border border-accent outline-primary rounded py-2 px-3 text-tertiary w-full"
-                placeholder="Enter your password"
-              />
-              {errors.password && (
-                <p className="text-red-500 text-xs italic">{errors.password}</p>
-              )}
-            </div>
+              {/* Password Field */}
+              <div className="mb-4">
+                <label className="block text-tertiary text-sm font-bold mb-2">
+                  Password
+                </label>
+                <input
+                  type="password"
+                  name="password"
+                  value={formData.password}
+                  onChange={handleChange}
+                  className="border border-accent outline-primary rounded py-2 px-3 text-tertiary w-full"
+                  placeholder="Enter your password"
+                />
+                {errors.password && (
+                  <p className="text-red-500 text-xs italic">
+                    {errors.password}
+                  </p>
+                )}
+              </div>
 
-            {/* Submit Button */}
-            <button
-              type="submit"
-              disabled={
-                !formData.firstName ||
-                !formData.lastName ||
-                !formData.email ||
-                !formData.password
-              }
-              className={`bg-primary self-start hover:bg-green-900 text-white font-bold py-2 px-10 rounded ${
-                (!formData.firstName ||
+              {/* Submit Button */}
+              <button
+                type="submit"
+                disabled={
+                  !formData.firstName ||
                   !formData.lastName ||
                   !formData.email ||
-                  !formData.password) &&
-                "opacity-50 cursor-not-allowed"
-              }`}>
-              Sign Up
-            </button>
+                  !formData.password
+                }
+                className={`bg-primary self-start hover:bg-green-900 text-white font-bold py-2 px-10 rounded ${
+                  (!formData.firstName ||
+                    !formData.lastName ||
+                    !formData.email ||
+                    !formData.password) &&
+                  "opacity-50 cursor-not-allowed"
+                }`}>
+                Sign Up
+              </button>
 
-            {/* Login Link */}
+              {/* Login Link */}
 
-            <NavLink to="/sign-in">
-              {" "}
-              <p className="underline text-secondary place-self-end">Login</p>
-            </NavLink>
-          </form>
-        </div>
+              <NavLink to="/sign-in">
+                {" "}
+                <p className="underline text-secondary place-self-end">Login</p>
+              </NavLink>
+            </form>
+          </div>
+        </motion.div>
       </div>
     </div>
   );

@@ -42,8 +42,8 @@ const FilterSection = () => {
       <hr className="border-t-2  border-accents" />
       <div>
         <CollapsibleSection title="Category">
-          {productCategories.map((productCategory) => (
-            <CheckboxWithText label={productCategory} />
+          {productCategories.map((productCategory,index) => (
+            <CheckboxWithText key={index} label={productCategory} />
           ))}
         </CollapsibleSection>
       </div>

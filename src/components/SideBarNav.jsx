@@ -100,7 +100,7 @@ const SideBarNav = () => {
       {/* buttom */}
       <div className="  p-5 flex flex-col gap-3  text-secondary bg-accents  ">
         <NavLink
-          to="/Sign-in"
+          to="/sign-in"
           className={({ isActive }) =>
             isActive ? "text-primary font-bold  rounded-lg" : ""
           }

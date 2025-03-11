@@ -14,8 +14,7 @@ const FilterSideBar = () => {
   const FilterRef = useRef(null);
   const sideBarRef = useRef(null);
 
-  useEffect(() => {
-    console.log("FilterSideBar activeFilterSideBar:", activeFilterSideBar); // Debug
+  useEffect(() => {// Debug
     const handleClickOutside = (event) => {
       if (
         FilterRef.current &&
@@ -88,8 +87,8 @@ const FilterSideBar = () => {
             <hr className="border-t-2  border-accents" />
             <div>
               <CollapsibleSection title="Category">
-                {productCategories.map((productCategory) => (
-                  <CheckboxWithText label={productCategory} />
+                {productCategories.map((productCategory,index) => (
+                  <CheckboxWithText key={index} label={productCategory} />
                 ))}
               </CollapsibleSection>
             </div>
