@@ -2,9 +2,10 @@
 import React, { useEffect, useRef } from "react";
 import { useStateContext } from "../contexts/useStateContext";
 import { RxCross2 } from "react-icons/rx";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { ButtonComponent } from "./export_components";
 import { PiTrashThin } from "react-icons/pi";
+
 
 const CartSideBar = () => {
   const {
@@ -15,7 +16,7 @@ const CartSideBar = () => {
     deleteCart,
   } = useStateContext();
   const cartRef = useRef(null);
-
+const navigate= useNavigate()
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (cartRef.current && !cartRef.current.contains(event.target)) {
@@ -40,7 +41,7 @@ const CartSideBar = () => {
     <div
       className={`fixed right-0 top-0 w-96 h-full py-10 px-5 bg-white z-50 transition-transform duration-300 ease-in-out transform ${
         activeCartSideBar ? "translate-x-0" : "translate-x-full"
-      } flex flex-col gap-5 ${
+      } flex flex-col gap-10 pt-20 ${
         cart.length === 0 && "justify-center items-center"
       } border-l border-accents px-2`}
       ref={cartRef}>
@@ -62,6 +63,10 @@ const CartSideBar = () => {
             <ButtonComponent
               className={"text-sm font-bold bg-primary self-center"}
               text={"Continue Shopping"}
+              onClick={() => {
+                navigate("/products-page");
+                setActiveCartSideBar((prev) => !prev);
+              }}
             />
           </div>
           <div className="flex flex-col gap-2">
@@ -78,11 +83,12 @@ const CartSideBar = () => {
           </div>
         </div>
       ) : (
-        <div className="mt-4 flex flex-col gap-4">
+        <div className="mt-4 flex flex-col gap-5">
+          <hr className=" border-t border-accents" />
           {cart.map((item) => (
             <div
               key={item.id}
-              className="flex justify-between items-center border-b pb-2">
+              className="flex pb-3 justify-between items-center border-b border-b-accents ">
               <div className="flex gap-2">
                 {/* image */}
                 <img
@@ -93,7 +99,7 @@ const CartSideBar = () => {
                 {/* product names and price and delete button */}
                 <div className="flex flex-col gap-2">
                   <h3 className="text-sm font-semibold">{item.productName}</h3>
-                  <p className="text-accents">
+                  <p className="text-secondary font-extralight">
                     ${item.productPrice.toFixed(2)}
                   </p>
                   {/* buttons */}
@@ -127,21 +133,23 @@ const CartSideBar = () => {
               </p>
             </div>
           ))}
-          <div className="flex justify-between items-center">
-            <h1 className="text-xl font-bold text-right">Estimated total</h1>
-            <div className="text-xl font-bold text-right">
-              Total: ${totalPrice.toFixed(2)}
+          <div className="flex flex-col gap-3">
+            <div className="flex justify-between items-center">
+              <h1 className="text-xl font-bold text-right">Estimated total</h1>
+              <div className="text-xl font-bold text-right">
+                ${totalPrice.toFixed(2)}
+              </div>
             </div>
+            <p className="text-[12px]">
+              Taxes, discounts and shipping calculated at checkout
+            </p>
+            <ButtonComponent
+              className={"bg-primary w-full"}
+              text={"Checkout"}></ButtonComponent>
+            <NavLink to="/cart" onClick={()=>setActiveCartSideBar((prev)=>!prev)}>
+              <p className="text-primary text-center">View cart</p>
+            </NavLink>
           </div>
-          <p className="text-[12px]">
-            Taxes, discounts and shipping calculated at checkout
-          </p>
-          <ButtonComponent
-            className={"bg-primary w-full"}
-            text={"Checkout"}></ButtonComponent>
-          <NavLink to="/cart">
-            <p className="text-primary text-center">View cart</p>
-          </NavLink>
         </div>
       )}
     </div>
