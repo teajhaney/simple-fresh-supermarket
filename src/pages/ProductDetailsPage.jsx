@@ -5,14 +5,17 @@ import { motion } from "framer-motion";
 import { FaStar } from "react-icons/fa";
 import {
   ButtonComponent,
-  CollapsibleSection,Tab
+  CollapsibleSection,
+  Tab,
 } from "../components/export_components";
 import {
   productListVariantsXright,
   productListVariantsXleft,
 } from "../constants";
+import { useStateContext } from "../contexts/useStateContext";
 
 const ProductDetailsPage = () => {
+  const { addTocart } = useStateContext();
   const [counter, setCounter] = useState(1);
   const location = useLocation();
   const product = location.state?.product;
@@ -86,22 +89,29 @@ const ProductDetailsPage = () => {
               perferendis animi laudantium!
             </p>
             <div className="flex">
-              <div
+              <button
                 className="h-8 w-8 text-secondary flex justify-center items-center border border-accents rounded-tl-lg rounded-bl-lg "
                 onClick={decreaseCounter}>
                 -
-              </div>
+              </button>
               <div className="h-8 w-10 text-secondary flex justify-center items-center border border-accents">
                 {counter}
               </div>
-              <div
+              <button
                 className="h-8 w-8 text-secondary flex justify-center items-center border border-accents rounded-tr-lg rounded-br-lg  "
                 onClick={increaseCounter}>
                 +
-              </div>
+              </button>
             </div>
             <div className="flex flex-col gap-2">
-              <ButtonComponent text={"Add to cart"} className={"bg-primary"} />
+              <ButtonComponent
+                text={"Add to cart"}
+                className={"bg-primary"}
+                onClick={(event) => {
+                  event.stopPropagation(); // Stop the click event from reaching the parent
+                  addTocart(product);
+                }}
+              />
               <ButtonComponent text={"Buy it now"} className={"bg-secondary"} />
             </div>
             <hr className="border-t-2  border-accents" />
@@ -131,7 +141,7 @@ const ProductDetailsPage = () => {
           </div>
         </motion.div>
       </div>
-     <Tab productName={product.productName}/>
+      <Tab productName={product.productName} />
     </div>
   );
 };

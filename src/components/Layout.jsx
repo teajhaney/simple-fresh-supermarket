@@ -6,6 +6,7 @@ import {
   Footer,
   SideBarNav,
   CartSideBar,
+  Notification,
 } from "./export_components";
 
 import { useStateContext } from "../contexts/useStateContext";
@@ -19,6 +20,7 @@ const Layout = () => {
   };
   return (
     <div className="relative">
+      <Notification />
       <Announcement />
       <NavigationBar />
       <CartSideBar />

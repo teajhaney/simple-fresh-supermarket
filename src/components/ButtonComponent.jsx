@@ -1,9 +1,10 @@
 import React from 'react'
 
-const ButtonComponent = ({ text, className }) => {
+const ButtonComponent = ({ text, className, onClick }) => {
   return (
     <button
-      className={`py-2 px-4 w-fit rounded-md text-white px-*  ${className}`}>
+      onClick={onClick}
+      className={`py-2 px-4 w-fit rounded-md text-white cursor-pointer px-*  ${className}`}>
       {text}
     </button>
   );

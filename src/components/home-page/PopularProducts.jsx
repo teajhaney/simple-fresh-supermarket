@@ -6,8 +6,10 @@ import { FaStar } from "react-icons/fa";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import { useStateContext } from "../../contexts/useStateContext";
 
 const PopularProducts = () => {
+  const {addTocart}=useStateContext()
   const navigate = useNavigate();
   const scrollRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(1);
@@ -70,6 +72,10 @@ const PopularProducts = () => {
                   <ButtonComponent
                     text={"Add to cart"}
                     className="bg-primary text-[10px]"
+                    onClick={(event) => {
+                      event.stopPropagation(); 
+                      addTocart(gorceryProduct);
+                    }}
                   />
                 </div>
               </div>

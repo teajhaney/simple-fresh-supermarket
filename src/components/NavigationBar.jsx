@@ -12,8 +12,7 @@ import { useStateContext } from "../contexts/useStateContext";
 
 //code
 const NavigationBar = () => {
-  const { setActiveSideBarNav, activeSideBarNav } = useStateContext();
-  const { activeCartSideBar, setActiveCartSideBar } = useStateContext();
+  const { setActiveSideBarNav, activeSideBarNav,setActiveCartSideBar, cartCount } = useStateContext();
   const [isDepartmentOpen, setIsDepartmentOpen] = useState(false);
   const [departmentSelected, setDepartmentSelected] =
     useState("All Departments");
@@ -80,9 +79,7 @@ const NavigationBar = () => {
             }>
             <CiUser />
           </NavLink>
-          {activeCartSideBar ? (
-            <CiShoppingCart className=" cursor-pointer" onClick="" />
-          ) : (
+          <button className="relative">
             <CiShoppingCart
               className=" cursor-pointer"
               onClick={(e) => {
@@ -90,7 +87,15 @@ const NavigationBar = () => {
                 setActiveCartSideBar((prevState) => !prevState);
               }}
             />
-          )}
+            <div
+              onClick={(e) => {
+                e.stopPropagation();
+                setActiveCartSideBar((prevState) => !prevState);
+              }}
+              className="w-4 h-4 text-white bg-primary rounded-full absolute left-0 bottom-0 flex justify-center items-center text-[10px] cursor-pointer transition-all duration-500 ease-in-out">
+              {cartCount}
+            </div>
+          </button>
         </div>
       </div>
       {/* Navbar */}
@@ -124,7 +129,7 @@ const NavigationBar = () => {
         </div>
         {/* Nav items */}
         <div>
-          <ul className=" flex gap-10 items-center cursor-pointer">
+          <ul className=" flex gap-10 items-center cursor-pointer ">
             <NavLink
               to="/"
               className={({ isActive }) => (isActive ? "text-primary" : "")}>

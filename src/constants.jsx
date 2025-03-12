@@ -5,6 +5,7 @@ import { TbExchange } from "react-icons/tb";
 
 export const gorceryProducts = [
   {
+    id: 1,
     buttonLabel: "Add to cart",
     bestSells: false,
     productName: "Fresh Banana",
@@ -18,6 +19,7 @@ export const gorceryProducts = [
     productCategory: ["Food, Beverages & Tobacco", "Fruits & Vegetables"],
   },
   {
+    id: 2,
     buttonLabel: "Add to cart",
     bestSells: false,
     productName: "Golden Pineapple",
@@ -31,6 +33,7 @@ export const gorceryProducts = [
     productCategory: ["Food, Beverages & Tobacco", "Fruits & Vegetables"],
   },
   {
+    id: 3,
     buttonLabel: "Sold out",
     bestSells: false,
     productName: "Cadbury 5 Star Chocolate",
@@ -44,6 +47,7 @@ export const gorceryProducts = [
     productCategory: ["Chocolate", "Food, Beverages & Tobacco"],
   },
   {
+    id: 4,
     buttonLabel: "Add to cart",
     bestSells: true,
     productName: "Beetroot",
@@ -57,6 +61,7 @@ export const gorceryProducts = [
     productCategory: ["Food, Beverages & Tobacco"],
   },
   {
+    id: 5,
     buttonLabel: "Add to cart",
     bestSells: false,
     productName: "Onion Flavour Potato",
@@ -70,6 +75,7 @@ export const gorceryProducts = [
     productCategory: "",
   },
   {
+    id: 6,
     buttonLabel: "Sold out",
     bestSells: false,
     productName: "Salted Instant Popcorn",
@@ -83,6 +89,7 @@ export const gorceryProducts = [
     productCategory: ["Food, Beverages & Tobacco", "Popcorn"],
   },
   {
+    id: 7,
     buttonLabel: "Add to cart",
     productName: "NutriChoice Digestive",
     popular: true,
@@ -95,6 +102,7 @@ export const gorceryProducts = [
     productCategory: ["Biscuits & Bakery"],
   },
   {
+    id: 8,
     buttonLabel: "Add to cart",
     bestSells: false,
     productName: "Haldiram's Sev Bhujia",
@@ -108,6 +116,7 @@ export const gorceryProducts = [
     productCategory: ["Food, Beverages & Tobacco", "Trail & Snack Mixes"],
   },
   {
+    id: 9,
     buttonLabel: "Add to cart",
     bestSells: false,
     productName: "Napolitanke Ljesnjak",
@@ -121,6 +130,7 @@ export const gorceryProducts = [
     productCategory: ["Baking Chocolate", "Food, Beverages & Tobacco"],
   },
   {
+    id: 10,
     buttonLabel: "Add to cart",
     bestSells: false,
     productName: "Golden Pineapple",
@@ -134,6 +144,7 @@ export const gorceryProducts = [
     productCategory: ["Food, Beverages & Tobacco", "Fruits & Vegetables"],
   },
   {
+    id: 11,
     buttonLabel: "Add to cart",
     bestSells: false,
     productName: "Fresh Kiwi",
@@ -147,6 +158,7 @@ export const gorceryProducts = [
     productCategory: ["Food, Beverages & Tobacco", "Fruits & Vegetables"],
   },
   {
+    id: 12,
     buttonLabel: "Add to cart",
     bestSells: false,
     productName: "Slurrp Millet Chocolate",
@@ -160,6 +172,7 @@ export const gorceryProducts = [
     productCategory: ["Food, Beverages & Tobacco", "Millet"],
   },
   {
+    id: 13,
     buttonLabel: "Add to cart",
     bestSells: false,
     productName: "Roast ground Coffee",
@@ -173,6 +186,7 @@ export const gorceryProducts = [
     productCategory: [""],
   },
   {
+    id: 14,
     buttonLabel: "Sold out",
     bestSells: false,
     productName: "Kellogg's Original Cereals",
@@ -190,6 +204,7 @@ export const gorceryProducts = [
     ],
   },
   {
+    id: 15,
     buttonLabel: "Add to cart",
     bestSells: true,
     productName: "Crushed Tomatoes",
@@ -203,6 +218,7 @@ export const gorceryProducts = [
     productCategory: ["Food, Beverages & Tobacco", "Tomato Paste"],
   },
   {
+    id: 16,
     buttonLabel: "Sold out",
     bestSells: false,
     productName: "Haldiram's Sev Bhujia",
@@ -216,6 +232,7 @@ export const gorceryProducts = [
     productCategory: ["Food, Beverages & Tobacco", "Trail & Snack Mixes"],
   },
   {
+    id: 17,
     buttonLabel: "Add to cart",
     bestSells: false,
     productName: "Fresh Banana",
@@ -229,6 +246,7 @@ export const gorceryProducts = [
     productCategory: ["Food, Beverages & Tobacco", "Fruits & Vegetables"],
   },
   {
+    id: 18,
     buttonLabel: "Add to cart",
     bestSells: true,
     productName: "Beetroot",
@@ -242,6 +260,7 @@ export const gorceryProducts = [
     productCategory: ["Food, Beverages & Tobacco"],
   },
   {
+    id: 19,
     buttonLabel: "Add to cart",
     bestSells: false,
     productName: "Fresh Kiwi",
@@ -255,6 +274,7 @@ export const gorceryProducts = [
     productCategory: ["Food, Beverages & Tobacco", "Fruits & Vegetables"],
   },
   {
+    id: 20,
     buttonLabel: "Add to cart",
     bestSells: false,
     productName: "Britannia Cheese Slices",
@@ -272,6 +292,7 @@ export const gorceryProducts = [
     ],
   },
   {
+    id: 21,
     buttonLabel: "Add to cart",
     bestSells: false,
     productName: "Blueberry Yogurt",
@@ -285,6 +306,7 @@ export const gorceryProducts = [
     productCategory: ["Food, Beverages & Tobacco", "Fruits & Vegetables"],
   },
   {
+    id: 22,
     buttonLabel: "Add to cart",
     bestSells: false,
     productName: "Fresh Apple",
@@ -298,6 +320,7 @@ export const gorceryProducts = [
     productCategory: ["Food, Beverages & Tobacco", "Fruits & Vegetables"],
   },
   {
+    id: 23,
     buttonLabel: "Sold out",
     bestSells: false,
     productName: "Amul Butter - 500g",
@@ -311,6 +334,7 @@ export const gorceryProducts = [
     productCategory: ["Food, Beverages & Tobacco", " Salted Butter"],
   },
   {
+    id: 24,
     buttonLabel: "Add to cart",
     bestSells: false,
     productName: "Blueberry Yogurt",

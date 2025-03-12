@@ -20,3 +20,4 @@ export { default as CheckboxWithText } from "./CheckboxWithText.jsx";
 export { default as RangeComponent } from "./RangeComponent.jsx";
 export { default as FilterSideBar } from "./FilterSideBar.jsx";
 export { default as Tab } from "./products-details-page/Tab.jsx";
+export {default as Notification} from"./Notificaton.jsx";

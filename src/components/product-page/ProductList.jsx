@@ -6,8 +6,9 @@ import { useNavigate } from "react-router-dom";
 import { IoIosArrowForward } from "react-icons/io";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
-
+import { useStateContext } from "../../contexts/useStateContext";
 const ProductList = () => {
+  const { addTocart } = useStateContext();
   const navigate = useNavigate();
   //  Number of products per page
   const productsPerPage = 8;
@@ -78,6 +79,13 @@ const ProductList = () => {
                 <ButtonComponent
                   text={displayedProduct.buttonLabel}
                   className="bg-primary text-[12px] font-bold"
+                  onClick={(event) => {
+                    event.stopPropagation(); // Stop the click event from reaching the parent
+                    {
+                      displayedProduct.buttonLabel === "Add to cart" &&
+                        addTocart(displayedProduct);
+                    }
+                  }}
                 />
               </div>
             </div>

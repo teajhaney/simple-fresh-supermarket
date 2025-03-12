@@ -4,7 +4,7 @@ const RangeComponent = () => {
   return (
     <div className="flex gap-4">
       <div className="flex flex-col gap-3">
-        <label htmlFor="from" className="text-sm font-semibold">
+        <label name="from" className="text-sm font-semibold">
           From
         </label>
         <input

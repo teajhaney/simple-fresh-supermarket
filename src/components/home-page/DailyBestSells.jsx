@@ -8,9 +8,11 @@ import {
 import { ButtonComponent } from "../export_components";
 import { FaStar } from "react-icons/fa";
 import { useNavigate, NavLink } from "react-router-dom";
-import {motion} from "framer-motion"
+import { motion } from "framer-motion"
+import { useStateContext } from "../../contexts/useStateContext";
 
 const DailyBestSells = () => {
+  const { addTocart } = useStateContext();
   const navigate = useNavigate();
 
   const handleProductClick = (products) => {
@@ -87,6 +89,10 @@ const DailyBestSells = () => {
                     <ButtonComponent
                       text={"Add to cart"}
                       className="bg-primary text-[10px]"
+                      onClick={(event) => {
+                        event.stopPropagation(); // Stop the click event from reaching the parent
+                        addTocart(gorceryProduct);
+                      }}
                     />
                   </div>
                 </div>

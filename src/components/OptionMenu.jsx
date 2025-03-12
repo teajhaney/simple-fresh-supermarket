@@ -23,15 +23,17 @@ const isActive =
         <span>{navItem}</span>
         {/* Dropdown Options */}
         {isOpen && (
-          <ul className="absolute bg-white border-2 border-accents rounded-md my-2 shadow-md z-50 min-w-24">
+          <ul className="absolute bg-white border-2 border-accents rounded-md my-2 shadow-md z-50 min-w-30">
             {navDropDownItems.map((navDropDownItem) => (
               <li
                 key={navDropDownItem.path}
-                className="p-1 hover:bg-accents rounded-md mx-3 my-2 cursor-pointer transition">
+                className="p-1 rounded-md mx-3 my-2 cursor-pointer transition hover:text-primary ">
                 <NavLink
                   to={navDropDownItem.path}
                   className={({ isActive }) =>
-                    isActive ? "block text-primary " : "block text-tertiary"
+                    isActive
+                      ? "block text-primary "
+                      : "block text-tertiary hover:text-primary"
                   }>
                   {navDropDownItem.title}
                 </NavLink>
