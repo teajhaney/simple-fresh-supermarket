@@ -127,9 +127,7 @@ const NavigationBar = () => {
           <ul className=" flex gap-10 items-center cursor-pointer">
             <NavLink
               to="/"
-              className={({ isActive }) =>
-                isActive ? "text-primary font-bold" : ""
-              }>
+              className={({ isActive }) => (isActive ? "text-primary" : "")}>
               Home
             </NavLink>
             {/* shop */}
@@ -144,9 +142,7 @@ const NavigationBar = () => {
             <li>
               <NavLink
                 to="/blog"
-                className={({ isActive }) =>
-                  isActive ? "text-primary font-bold" : ""
-                }>
+                className={({ isActive }) => (isActive ? "text-primary" : "")}>
                 Blog
               </NavLink>
             </li>

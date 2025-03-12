@@ -1,16 +1,23 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 const OptionMenu = ({ navItem, navDropDownItems }) => {
   const [isOpen, setIsOpen] = useState(false);
-
-  // Check if any dropdown item is active
-
+    const location = useLocation(); 
+const isActive =
+  (navItem === "Products" &&
+    (location.pathname.startsWith("/products") ||
+      location.pathname === "/cart")) ||
+  (navItem === "Account" &&
+    (location.pathname.startsWith("/sign-in") ||
+      location.pathname === "/sign-up"));
   return (
     <div className="relative">
       {/* Select Box */}
       <div
-        className="gap-3 items-center p-3 rounded-md cursor-pointer"
+        className={`gap-3 items-center p-3 rounded-md cursor-pointer ${
+          isActive ? "text-primary" : ""
+        }`}
         onMouseEnter={() => setIsOpen(true)}
         onMouseLeave={() => setIsOpen(false)}>
         <span>{navItem}</span>

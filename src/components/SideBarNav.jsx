@@ -68,7 +68,7 @@ const SideBarNav = () => {
           to="/"
           onClick={() => setActiveSideBarNav((prevState) => !prevState)}
           className={({ isActive }) =>
-            isActive ? "bg-primary font-bold  rounded-lg" : ""
+            isActive ? "bg-primary text-white rounded-lg" : ""
           }>
           <div className="w-full  px-2 py-3  ">Home</div>
         </NavLink>
@@ -76,7 +76,7 @@ const SideBarNav = () => {
           to="/products-page"
           onClick={() => setActiveSideBarNav((prevState) => !prevState)}
           className={({ isActive }) =>
-            isActive ? "bg-primary font-bold  rounded-lg" : ""
+            isActive ? "bg-primary text-white rounded-lg" : ""
           }>
           <div className="w-full  px-2 py-3  ">Products</div>
         </NavLink>
@@ -84,7 +84,7 @@ const SideBarNav = () => {
           to="/cart"
           onClick={() => setActiveSideBarNav((prevState) => !prevState)}
           className={({ isActive }) =>
-            isActive ? "bg-primary font-bold  rounded-lg" : ""
+            isActive ? "bg-primary text-white rounded-lg" : ""
           }>
           <div className="w-full  px-2 py-3  ">Cart</div>
         </NavLink>
@@ -92,7 +92,7 @@ const SideBarNav = () => {
           to="/blog"
           onClick={() => setActiveSideBarNav((prevState) => !prevState)}
           className={({ isActive }) =>
-            isActive ? "bg-primary font-bold  rounded-lg" : ""
+            isActive ? "bg-primary text-white rounded-lg" : ""
           }>
           <div className="w-full  px-2 py-3  ">Blog</div>
         </NavLink>
@@ -102,7 +102,7 @@ const SideBarNav = () => {
         <NavLink
           to="/sign-in"
           className={({ isActive }) =>
-            isActive ? "text-primary font-bold  rounded-lg" : ""
+            isActive ? "text-primary rounded-lg" : ""
           }
           onClick={() => setActiveSideBarNav((prevState) => !prevState)}>
           <div className="flex gap-3 items-center text-md">

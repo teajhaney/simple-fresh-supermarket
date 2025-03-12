@@ -81,19 +81,17 @@ const SignUpPage = () => {
     <div className="bodyContent flex justify-center items-center">
       <div className="flex flex-col md:flex-row gap-20 my-24 justify-center items-center">
         <motion.div
-                 variants={productListVariantsXleft}
-                 initial="hidden"
-                 animate="visible"
-                 className="w-full bg-amber-700"
-                 exit="hidden">
-              
-                   <img
-                     src="https://freshcart77.myshopify.com/cdn/shop/files/signin.png?v=1724218593"
-                     alt="Sign up illustration"
-                     className="object-cover"
-                   />
-               
-               </motion.div>
+          variants={productListVariantsXleft}
+          initial="hidden"
+          animate="visible"
+          className="w-full"
+          exit="hidden">
+          <img
+            src="https://freshcart77.myshopify.com/cdn/shop/files/signin.png?v=1724218593"
+            alt="Sign up illustration"
+            className="object-cover"
+          />
+        </motion.div>
         {/* form */}
         <motion.div
           variants={productListVariantsXright}
