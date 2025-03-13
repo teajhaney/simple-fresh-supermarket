@@ -11,6 +11,8 @@ import {
   ProductsPage,
   NotFoundPage,
   ProductDetailsPage,
+  CheckOuTPage,
+
 } from "./pages/export_pages.jsx";
 import { ContextProvider } from "./contexts/ContextProvider";
 import { Layout } from "./components/export_components.jsx";
@@ -27,6 +29,7 @@ const router = createBrowserRouter([
       { path: "/cart", element: <CartPage /> },
       { path: "/sign-in", element: <SignInPage /> },
       { path: "/sign-up", element: <SignUpPage /> },
+      { path: "/checkout-page", element: <CheckOuTPage /> },
     ],
   },
 ]);

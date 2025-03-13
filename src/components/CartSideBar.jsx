@@ -35,7 +35,10 @@ const CartSideBar = () => {
   // Calculate total price
   const totalPrice =
     cart.reduce((acc, item) => acc + item.productPrice * item.quantity, 0) || 0;
-
+  ///handle clickj
+  const handleProductClick = (product) => {
+    navigate("/products-details-page", { state: { product } });
+  };
   return (
     <div
       className={`fixed right-0 top-0 w-96 h-full py-10 px-5 bg-white z-50 transition-transform duration-300 ease-in-out transform ${
@@ -88,12 +91,16 @@ const CartSideBar = () => {
             {cart.map((item) => (
               <div
                 key={item.id}
-                className="flex pb-3 justify-between items-center border-b border-b-accents">
+                className="flex pb-3 justify-between items-center border-b border-b-accents ">
                 <div className="flex gap-2">
                   <img
                     src={item.productImage}
                     alt={item.productName}
-                    className="w-16 h-16 object-cover rounded"
+                    className="w-16 h-16 object-cover rounded cursor-pointer"
+                    onClick={() => {
+                      handleProductClick(item);
+                      setActiveCartSideBar(false);
+                    }}
                   />
                   <div className="flex flex-col gap-2">
                     <h3 className="text-sm font-semibold">
@@ -105,7 +112,7 @@ const CartSideBar = () => {
                     <div className="flex gap-2 items-center">
                       <div className="flex items-center">
                         <button
-                          className="h-8 w-8 text-secondary flex justify-center items-center border border-accents rounded-tl-lg rounded-bl-lg"
+                          className="h-8 w-8 text-secondary flex justify-center items-center border border-accents cursor-pointer rounded-tl-lg rounded-bl-lg"
                           onClick={() => updateCartQuantity(item.id, -1)}>
                           -
                         </button>
@@ -113,7 +120,7 @@ const CartSideBar = () => {
                           {item.quantity}
                         </span>
                         <button
-                          className="h-8 w-8 text-secondary flex justify-center items-center border border-accents rounded-tr-lg rounded-br-lg"
+                          className="h-8 w-8 text-secondary flex justify-center items-center border border-accents cursor-pointer rounded-tr-lg rounded-br-lg"
                           onClick={() => updateCartQuantity(item.id, 1)}>
                           +
                         </button>
@@ -141,9 +148,13 @@ const CartSideBar = () => {
             <p className="text-[12px]">
               Taxes, discounts and shipping calculated at checkout
             </p>
-            <ButtonComponent
-              className={"bg-primary w-full"}
-              text={"Checkout"}></ButtonComponent>
+            <NavLink
+              to="/checkout-page"
+              onClick={() => setActiveCartSideBar((prev) => !prev)}>
+              <ButtonComponent
+                className={"bg-primary w-full"}
+                text={"Checkout"}></ButtonComponent>
+            </NavLink>
             <NavLink
               to="/cart"
               onClick={() => setActiveCartSideBar((prev) => !prev)}>

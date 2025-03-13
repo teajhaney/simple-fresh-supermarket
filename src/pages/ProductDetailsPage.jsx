@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+
 import { NavLink, useLocation } from "react-router-dom";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
@@ -15,19 +15,29 @@ import {
 import { useStateContext } from "../contexts/useStateContext";
 
 const ProductDetailsPage = () => {
-  const { addTocart } = useStateContext();
-  const [counter, setCounter] = useState(1);
+  const { addTocart, updateCartQuantity, cart } = useStateContext();
+
+
   const location = useLocation();
-  const product = location.state?.product;
-  //increase counter
-  const increaseCounter = () => setCounter((prev) => prev + 1);
-  //decrease counter
-  const decreaseCounter = () => setCounter((prev) => (prev > 1 ? prev - 1 : 1));
+  const product = location.state?.product || location.state?.item;
+
   if (!product) {
     return (
       <p className="text-center text-red-500">No product details available.</p>
     );
   }
+  // Find the quantity from the cart, default to 1 if not in cart
+  const cartItem = cart.find((item) => item.id === product.id);
+  const quantity = cartItem ? cartItem.quantity : 1;
+
+  // Handle quantity update
+  const handleQuantityChange = (change) => {
+    if (!cartItem) {
+      // If not in cart, add it first with quantity 1
+      addTocart({ ...product, quantity: 1 });
+    }
+    updateCartQuantity(product.id, change);
+  };
   return (
     <div className="bodyContent my-8 flex- flex-col gap-5">
       {" "}
@@ -91,15 +101,15 @@ const ProductDetailsPage = () => {
             <div className="flex">
               <button
                 className="h-8 w-8 text-secondary flex justify-center items-center border border-accents rounded-tl-lg rounded-bl-lg "
-                onClick={decreaseCounter}>
+                onClick={() => handleQuantityChange(-1)}>
                 -
               </button>
               <div className="h-8 w-10 text-secondary flex justify-center items-center border border-accents">
-                {counter}
+                {quantity}
               </div>
               <button
                 className="h-8 w-8 text-secondary flex justify-center items-center border border-accents rounded-tr-lg rounded-br-lg  "
-                onClick={increaseCounter}>
+                onClick={() => handleQuantityChange(+1)}>
                 +
               </button>
             </div>

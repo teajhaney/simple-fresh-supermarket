@@ -36,6 +36,7 @@ const CartPage = () => {
   // Calculate total price
   const totalPrice =
     cart.reduce((acc, item) => acc + item.productPrice * item.quantity, 0) || 0;
+  
   return (
     <section className="bodyContent ">
       <motion.div
@@ -165,9 +166,11 @@ const CartPage = () => {
                 <p className="text-[12px] text-center">
                   Taxes, discounts and shipping calculated at checkout
                 </p>
-                <ButtonComponent
-                  className={"bg-primary !wi-96 "}
-                  text={"Check out"}></ButtonComponent>
+                <NavLink to="/checkout-page">
+                  <ButtonComponent
+                    className={"bg-primary !wi-96 "}
+                    text={"Check out"}></ButtonComponent>
+                </NavLink>
               </div>
             </div>
           )}
