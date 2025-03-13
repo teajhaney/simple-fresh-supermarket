@@ -29,7 +29,7 @@ const ProductList = () => {
   };
 
   return (
-    <div className="md:col-span-4 lg:col-span-9 flex-col ">
+    <section className="md:col-span-4 lg:col-span-9 flex-col ">
       <div className="flex flex-col gap-3">
         <div className="h-30 p-10 bg-accents flex flex-col justify-center rounded-lg gap-2">
           {/* products heading  */}
@@ -121,7 +121,7 @@ const ProductList = () => {
           <IoIosArrowForward />
         </button>
       </div>
-    </div>
+    </section>
   );
 };
 

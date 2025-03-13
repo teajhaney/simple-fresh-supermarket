@@ -53,14 +53,14 @@ const SideBarNav = () => {
     };
   }, [activeSideBarNav, setActiveSideBarNav]);
 
-  ///height
-  const viewHeight = parent.outerHeight;
+
+
   return (
     <div
-      className={`fixed left-0 w-72 z-30 h-200 bg-white lg:hidden border-r-2 border-accents flex flex-col  transition-transform duration-300 ease-in-out transform ${
+      className={`absolute left-0 w-72 z-30 h-screen bg-white lg:hidden border-r-2 border-accents flex flex-col  transition-transform duration-300 ease-in-out transform ${
         activeSideBarNav ? "translate-x-0" : "-translate-x-full"
       }`}
-      style={{ height: viewHeight }}
+    
       ref={sideBarRef}>
       {/* //sidebar links */}
       <div className="flex flex-col  gap-3 p-5 text-secondary">

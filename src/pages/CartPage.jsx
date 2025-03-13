@@ -37,14 +37,14 @@ const CartPage = () => {
   const totalPrice =
     cart.reduce((acc, item) => acc + item.productPrice * item.quantity, 0) || 0;
   return (
-    <div className="bodyContent mt-16">
+    <section className="bodyContent ">
       <motion.div
         variants={productListVariantsXright}
         initial="hidden"
         animate="visible"
         exit="hidden">
         <div
-          className={`w-full h-full py-10 px-5  z-50  flex flex-col gap-5 ${
+          className={`w-full h-full py-5 px-5  z-50  flex flex-col gap-5 ${
             cart.length === 0 && "justify-center items-center"
           } `}>
           {cart.length === 0 ? (
@@ -173,7 +173,7 @@ const CartPage = () => {
           )}
         </div>
       </motion.div>
-    </div>
+    </section>
   );
 };
 

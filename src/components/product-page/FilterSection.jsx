@@ -19,14 +19,14 @@ const FilterSection = () => {
   ).length;
 
   return (
-    <div className="hidden md:flex md:flex-col md:gap-3 md:mr-10">
+    <aside className="hidden md:flex md:flex-col md:gap-3 md:mr-10">
       <h1 className="sectionHeadings">Filter:</h1>
       <hr className="border-t-2  border-accents" />
       {/* Avilability */}
       <div>
         <CollapsibleSection title="Availability">
           <CheckboxWithText label={`In stock (${productsInStock})`} />
-          <CheckboxWithText label={`In stock (${productOutOfStock})`} />
+          <CheckboxWithText label={`Out of stock (${productOutOfStock})`} />
         </CollapsibleSection>
       </div>
       <hr className="border-t-2  border-accents" />
@@ -47,8 +47,11 @@ const FilterSection = () => {
           ))}
         </CollapsibleSection>
       </div>
-    </div>
+    </aside>
   );
 };
 
 export default FilterSection;
+
+
+

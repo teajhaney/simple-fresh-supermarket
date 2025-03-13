@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { StateContext } from "./useStateContext"; // Import from the new file
 
 export const ContextProvider = ({ children }) => {
@@ -8,21 +8,25 @@ export const ContextProvider = ({ children }) => {
   //cart
   const [cart, setCart] = useState([]);
   const [notification, setNotification] = useState(null);
-
-  //add to cart function
-  // const addTocart = (product) => {
-  //   setCart((prevCart) => [...prevCart, product]);
-  //   // Show notification
-  //   setNotification(`${product.productName} has been added to cart!`);
-
-  //   // Hide notification after 5 seconds
-  //   setTimeout(() => {
-  //     setNotification(null);
-  //   }, 1000);
-  // };
-
-  //add to cartCount
+  //cartCount
   const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
+  // Debounced setNotification function
+  const debouncedSetNotification = useCallback(() => {
+    let timeoutId;
+    return (newMessage) => {
+      clearTimeout(timeoutId); // Clear any existing timer
+      timeoutId = setTimeout(() => {
+        setNotification(newMessage);
+        setTimeout(() => {
+          setNotification(null); // Clear notification after 5 seconds
+        }, 1000);
+      }, 500); // Debounce delay of 500ms
+    };
+  }, []); // Empty dependency array
+
+  // Initialize the debounced function
+  const setDebouncedNotification = debouncedSetNotification();
+  //add to cart fn
   const addTocart = (product) => {
     setCart((prevCart) => {
       const existingItem = prevCart.find((item) => item.id === product.id);
@@ -39,7 +43,8 @@ export const ContextProvider = ({ children }) => {
       }
     });
     // Show notification
-    setNotification(`${product.productName} has been added to cart!`);
+    // Use debounced notification
+    setDebouncedNotification(`${product.productName} has been added to cart!`);
 
     // Hide notification after 5 seconds
     setTimeout(() => {

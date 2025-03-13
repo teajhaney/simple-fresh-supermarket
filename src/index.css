@@ -21,3 +21,12 @@
     @apply text-secondary font-semibold text-xl 
   }
 }
+
+.custom-scrollbar-hidden::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari, and Edge */
+}
+
+.custom-scrollbar-hidden {
+  -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
