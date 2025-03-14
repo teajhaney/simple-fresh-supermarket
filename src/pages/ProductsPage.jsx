@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { IoFilterOutline } from "react-icons/io5";
 import {
   ProductList,
@@ -6,10 +6,21 @@ import {
   FilterSideBar,
 } from "../components/export_components";
 import { NavLink } from "react-router-dom";
-import { useStateContext } from "../contexts/useStateContext";
+import {useStateContext} from "../contexts/useStateContext"
 import { gorceryProducts } from "../constants";
 const ProductsPage = () => {
   const { setActiveFilterSideBar } = useStateContext();
+const [filters, setFilters] = useState({
+  inStock: false,
+  outOfStock: false,
+  priceRange: { from: 0, to: 250 },
+  categories: [],
+});
+
+const handleFilterChange = (newFilters) => {
+  setFilters(newFilters);
+};
+  
   return (
     <div className="bodyContent my-8">
       <h1 className="text-sm font-semibold">
@@ -36,14 +47,15 @@ const ProductsPage = () => {
               {gorceryProducts.length} products
             </h1>
           </div>
-          <FilterSection />
+          <FilterSection onFilterChange={handleFilterChange} />
         </div>
         {/* product div */}
-        <ProductList />
-        <FilterSideBar />
+        <ProductList filters={filters} />
+        <FilterSideBar onFilterChange={handleFilterChange} />
       </div>
     </div>
   );
 };
 
 export default ProductsPage;
+
