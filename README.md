@@ -36,7 +36,14 @@ A modern and responsive supermarket store built with React and Vite. This projec
     •	📜 vite.config.js
     •	📜 README.md
 
+
+# 📂 Useful Links
+🔗 ß[Github Respository](https://github.com/teajhaney/simple-fresh-supermarket)
+🔗 [github](https://github.com/teajhaney)
+🔗 [twitter/x](https://x.com/seobinim)
+
+
 # 👨‍💻 Author
 
 Yusuf Tijani Olatunde
-🔗 [github](https://github.com/teajhaney)
+
