@@ -24,20 +24,19 @@ A modern and responsive supermarket store built with React and Vite. This projec
 
 # 📂 Project Structure
 
-📦 simplefresh-supermarket
-┣ 📂 src
-┃ ┣ 📂 components      # Reusable UI components
-┃ ┣ 📂 contexts        # Context API for global state management
-┃ ┣ 📂 pages           # Page components (Product Listing, Cart, etc.)
-┃ ┣ 📂 constants       # Static data like product list
-┃ ┣ 📜 App.jsx         # Main application component
-┃ ┗ 📜 main.jsx        # Entry point
-┣ 📜 package.json
-┣ 📜 vite.config.js
-┗ 📜 README.md
-
+    •	simplefresh-supermarket/
+    •	📂 src/
+    •	📂 components/ → Reusable UI components
+    •	📂 contexts/ → Context API for global state management
+    •	📂 pages/ → Page components (Product Listing, Cart, etc.)
+    •	📂 constants/ → Static data like product list
+    •	📜 App.jsx → Main application component
+    •	📜 main.jsx → Entry point
+    •	📜 package.json
+    •	📜 vite.config.js
+    •	📜 README.md
 
 # 👨‍💻 Author
 
 Yusuf Tijani Olatunde
-🔗 [github]( https://github.com/teajhaney)
+🔗 [github](https://github.com/teajhaney)
