@@ -82,7 +82,6 @@ const FilterSideBar = ({ onFilterChange }) => {
 
   // Handle applying filters
   const handleApplyFilters = () => {
-    console.log("Applying filters:", filters);
     onFilterChange(filters);
     setActiveFilterSideBar(false); // Close the sidebar after applying
   };

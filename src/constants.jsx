@@ -72,7 +72,7 @@ export const gorceryProducts = [
     productInStock: true,
     productImage:
       "https://freshcart77.myshopify.com/cdn/shop/files/product-img-4-1.jpg?v=1723016049&width=720",
-    productCategory: "",
+    productCategory: ["Fruits & Vegetables"],
   },
   {
     id: 6,

@@ -1,77 +1,85 @@
 import { useState, useCallback } from "react";
-import { StateContext } from "./useStateContext"; // Import from the new file
+import { StateContext } from "./useStateContext";
 
 export const ContextProvider = ({ children }) => {
   const [activeSideBarNav, setActiveSideBarNav] = useState(false);
   const [activeCartSideBar, setActiveCartSideBar] = useState(false);
   const [activeFilterSideBar, setActiveFilterSideBar] = useState(false);
-  //cart
   const [cart, setCart] = useState([]);
   const [notification, setNotification] = useState(null);
-  //cartCount
+
   const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
-  // Debounced setNotification function
+
   const debouncedSetNotification = useCallback(() => {
     let timeoutId;
     return (newMessage) => {
-      clearTimeout(timeoutId); // Clear any existing timer
+      clearTimeout(timeoutId);
       timeoutId = setTimeout(() => {
         setNotification(newMessage);
         setTimeout(() => {
-          setNotification(null); // Clear notification after 5 seconds
+          setNotification(null);
         }, 1000);
-      }, 500); // Debounce delay of 500ms
+      }, 500);
     };
-  }, []); // Empty dependency array
+  }, []);
 
-  // Initialize the debounced function
   const setDebouncedNotification = debouncedSetNotification();
-  //add to cart fn
-  const addTocart = (product) => {
+
+  const addTocart = (product, setQuantity = false) => {
+    // Validate product data
+    if (
+      !product ||
+      !product.id ||
+      !product.productName ||
+      isNaN(product.productPrice)
+    ) {
+      console.error("Invalid product data:", product);
+      return;
+    }
+
+    const quantityToAdd = product.quantity || 1;
     const existingItemIndex = cart.findIndex((item) => item.id === product.id);
 
     if (existingItemIndex !== -1) {
-      // Item exists, update quantity
+      // Item exists in cart
       const updatedCart = [...cart];
-      updatedCart[existingItemIndex].quantity = product.quantity;
+      if (setQuantity) {
+        // Set the quantity to the provided value (used in ProductDetailsPage)
+        updatedCart[existingItemIndex].quantity = quantityToAdd;
+      } else {
+        // Increment the quantity (used in ProductList and PopularProducts)
+        updatedCart[existingItemIndex].quantity += quantityToAdd;
+      }
       setCart(updatedCart);
     } else {
-      // New item, add to cart
+      // New item, add to cart with validated price
       setCart((prevCart) => [
         ...prevCart,
         {
           ...product,
-          quantity: product.quantity || 1,
+          productPrice: Number(product.productPrice), // Ensure price is a number
+          quantity: quantityToAdd,
         },
       ]);
     }
 
-    // Show notification
-    // Use debounced notification
     setDebouncedNotification(`${product.productName} has been added to cart!`);
-
-    // Hide notification after 5 seconds
-    setTimeout(() => {
-      setNotification(null);
-    }, 5000);
   };
-  // Function to update quantity
+
   const updateCartQuantity = (id, amount) => {
-    setCart(
-      (prevCart) =>
-        prevCart
-          .map((item) =>
-            item.id === id
-              ? { ...item, quantity: item.quantity + amount }
-              : item
-          )
-          .filter((item) => item.quantity > 0) // Remove item if quantity is 0
+    setCart((prevCart) =>
+      prevCart
+        .map((item) =>
+          item.id === id ? { ...item, quantity: item.quantity + amount } : item
+        )
+        .filter((item) => item.quantity > 0)
     );
   };
-  //delete acrt
+
   const deleteCart = (product) => {
     setCart((prevCart) => prevCart.filter((item) => item.id !== product.id));
   };
+
   return (
     <StateContext.Provider
       value={{
@@ -81,7 +89,6 @@ export const ContextProvider = ({ children }) => {
         setActiveCartSideBar,
         activeFilterSideBar,
         setActiveFilterSideBar,
-        //cart
         cart,
         addTocart,
         deleteCart,

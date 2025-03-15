@@ -74,7 +74,8 @@ const PopularProducts = () => {
                     className="bg-primary text-[10px]"
                     onClick={(event) => {
                       event.stopPropagation();
-                      addTocart(gorceryProduct);
+                      // addTocart(gorceryProduct);
+                      addTocart({ ...gorceryProduct, quantity: 1 },false);
                     }}
                   />
                 </div>
@@ -123,3 +124,5 @@ const PopularProducts = () => {
 };
 
 export default PopularProducts;
+
+

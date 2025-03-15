@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { useState, useEffect } from "react"; // Added useState
+import { useState, useEffect } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { FaStar } from "react-icons/fa";
@@ -21,7 +21,6 @@ const ProductDetailsPage = () => {
 
   const [localQuantity, setLocalQuantity] = useState(1);
 
-  // Sync with cart quantity if item exists
   useEffect(() => {
     const cartItem = cart.find((item) => item.id === product?.id);
     if (cartItem) {
@@ -43,8 +42,8 @@ const ProductDetailsPage = () => {
   };
 
   const handleAddToCart = () => {
-    // Pass the product with the selected quantity
-    addTocart({ ...product, quantity: localQuantity });
+    // Pass true as the second argument to indicate setting the quantity
+    addTocart({ ...product, quantity: localQuantity }, true);
   };
 
   return (
@@ -65,7 +64,8 @@ const ProductDetailsPage = () => {
           initial="hidden"
           animate="visible"
           exit="hidden"
-          className="w-full md:self-center">
+          className="w-full md:self-center"
+        >
           <img src={product.productImage} alt={product.productName} />
         </motion.div>
         <motion.div
@@ -73,7 +73,8 @@ const ProductDetailsPage = () => {
           initial="hidden"
           animate="visible"
           exit="hidden"
-          className="w-full">
+          className="w-full"
+        >
           <div className="w-full h-full flex flex-col gap-5">
             <h2 className="text-3xl text-tertiary font-semibold">
               {product.productName}
@@ -83,11 +84,7 @@ const ProductDetailsPage = () => {
                 <FaStar
                   key={i}
                   className={`text-sm
-                    ${
-                      i < product.productRatings
-                        ? "text-[#FFC007]"
-                        : "text-gray-300"
-                    }`}
+                    ${i < product.productRatings ? "text-[#FFC007]" : "text-gray-300"}`}
                 />
               ))}
             </div>
@@ -105,7 +102,8 @@ const ProductDetailsPage = () => {
             <div className="flex">
               <button
                 className="h-8 w-8 text-secondary flex justify-center items-center border border-accents rounded-tl-lg rounded-bl-lg"
-                onClick={() => handleQuantityChange(-1)}>
+                onClick={() => handleQuantityChange(-1)}
+              >
                 -
               </button>
               <div className="h-8 w-10 text-secondary flex justify-center items-center border border-accents">
@@ -113,7 +111,8 @@ const ProductDetailsPage = () => {
               </div>
               <button
                 className="h-8 w-8 text-secondary flex justify-center items-center border border-accents rounded-tr-lg rounded-br-lg"
-                onClick={() => handleQuantityChange(+1)}>
+                onClick={() => handleQuantityChange(+1)}
+              >
                 +
               </button>
             </div>

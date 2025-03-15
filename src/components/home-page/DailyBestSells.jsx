@@ -46,7 +46,7 @@ const DailyBestSells = () => {
               .filter((product) => product.bestSells)
               .map((gorceryProduct, index) => (
                 <div
-                  onClick={() => handleProductClick(gorceryProduct)}
+                  onClick={() => handleProductClick(gorceryProduct,1)}
                   key={index}
                   className={"group cursor-pointer"}>
                   <div
@@ -91,7 +91,8 @@ const DailyBestSells = () => {
                       className="bg-primary text-[10px]"
                       onClick={(event) => {
                         event.stopPropagation(); // Stop the click event from reaching the parent
-                        addTocart(gorceryProduct);
+                        // addTocart(gorceryProduct);
+                        addTocart({ ...gorceryProduct, quantity: 1 },false);
                       }}
                     />
                   </div>
@@ -105,3 +106,5 @@ const DailyBestSells = () => {
 };
 
 export default DailyBestSells;
+
+

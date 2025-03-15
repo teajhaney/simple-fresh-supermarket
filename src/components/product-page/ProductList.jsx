@@ -117,7 +117,8 @@ const ProductList = ({
                     onClick={(event) => {
                       event.stopPropagation();
                       if (displayedProduct.buttonLabel === "Add to cart") {
-                        addTocart(displayedProduct);
+                        // addTocart(displayedProduct);
+                        addTocart({ ...displayedProduct, quantity: 1 }, false);
                       }
                     }}
                   />
