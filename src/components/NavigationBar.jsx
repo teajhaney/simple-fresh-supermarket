@@ -12,7 +12,12 @@ import { useStateContext } from "../contexts/useStateContext";
 
 //code
 const NavigationBar = () => {
-  const { setActiveSideBarNav, activeSideBarNav,setActiveCartSideBar, cartCount } = useStateContext();
+  const {
+    setActiveSideBarNav,
+    activeSideBarNav,
+    setActiveCartSideBar,
+    cartCount,
+  } = useStateContext();
   const [isDepartmentOpen, setIsDepartmentOpen] = useState(false);
   const [departmentSelected, setDepartmentSelected] =
     useState("All Departments");
@@ -57,8 +62,13 @@ const NavigationBar = () => {
                 onClick={() => setActiveSideBarNav((prevState) => !prevState)}
               />
             )}
-            <GiShoppingCart className="text-primary" />
-            <h1 className="text-2xl font-bold">SimpleCart</h1>
+
+            <NavLink to="/">
+              <div className="flex items-center gap-2 text-4xl">
+                <GiShoppingCart className="text-primary" />
+                <h1 className="text-2xl font-bold">SimpleCart</h1>
+              </div>
+            </NavLink>
           </div>
           {/* search */}
           <input

@@ -7,6 +7,7 @@ import {
   SideBarNav,
   CartSideBar,
   Notification,
+  ScrollToTop
 } from "./export_components";
 
 import { useStateContext } from "../contexts/useStateContext";
@@ -20,6 +21,7 @@ const Layout = () => {
   };
   return (
     <div className="relative">
+      <ScrollToTop/>
       <Notification />
       <Announcement />
       <NavigationBar />
