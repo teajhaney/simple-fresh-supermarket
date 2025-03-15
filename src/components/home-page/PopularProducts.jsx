@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 import { useStateContext } from "../../contexts/useStateContext";
 
 const PopularProducts = () => {
-  const {addTocart}=useStateContext()
+  const { addTocart } = useStateContext();
   const navigate = useNavigate();
   const scrollRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(1);
@@ -73,7 +73,7 @@ const PopularProducts = () => {
                     text={"Add to cart"}
                     className="bg-primary text-[10px]"
                     onClick={(event) => {
-                      event.stopPropagation(); 
+                      event.stopPropagation();
                       addTocart(gorceryProduct);
                     }}
                   />

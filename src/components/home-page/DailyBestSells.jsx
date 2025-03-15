@@ -15,8 +15,8 @@ const DailyBestSells = () => {
   const { addTocart } = useStateContext();
   const navigate = useNavigate();
 
-  const handleProductClick = (products) => {
-    navigate('/products-details-page', {state:{products}});
+  const handleProductClick = (product) => {
+    navigate('/products-details-page', {state:{product}});
   };
   return (
     <section className="h-fit mt-24  ">
