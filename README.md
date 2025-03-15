@@ -30,7 +30,6 @@ A modern and responsive supermarket store built with React and Vite. This projec
     •	📂 contexts/ → Context API for global state management
     •	📂 pages/ → Page components (Product Listing, Cart, etc.)
     •	📂 constants/ → Static data like product list
-    •	📜 App.jsx → Main application component
     •	📜 main.jsx → Entry point
     •	📜 package.json
     •	📜 vite.config.js
