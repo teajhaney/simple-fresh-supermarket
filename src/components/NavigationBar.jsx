@@ -124,7 +124,7 @@ const NavigationBar = () => {
               value={searchQuery}
               onChange={handleSearchInputChange}
               placeholder="Search for products..."
-              className="w-200  h-10 hidden lg:flex rounded-sm border-2 text-secondary outline-primary px-3 text-lg  border-accents"
+              className="w-200 md:w-100  h-10 hidden md:flex rounded-sm border-2 text-secondary outline-primary px-3 text-lg  border-accents"
             />
             {searchDropdown && filteredProducts.length > 0 && (
               <ul
