@@ -129,7 +129,7 @@ const NavigationBar = () => {
             {searchDropdown && filteredProducts.length > 0 && (
               <ul
                 ref={searchDropdownRef}
-                className="absolute bg-white  shadow-lg rounded w-200 h-100 overflow-auto z-10">
+                className="absolute bg-white  shadow-lg rounded w-200 md:w-100 h-fit max-h-100 overflow-auto z-10">
                 {filteredProducts.map((filteredProduct) => (
                   <li
                     key={filteredProduct.id}
