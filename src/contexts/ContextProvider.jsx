@@ -1,13 +1,30 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import { StateContext } from "./useStateContext";
 
 export const ContextProvider = ({ children }) => {
   const [activeSideBarNav, setActiveSideBarNav] = useState(false);
   const [activeCartSideBar, setActiveCartSideBar] = useState(false);
   const [activeFilterSideBar, setActiveFilterSideBar] = useState(false);
-  const [cart, setCart] = useState([]);
   const [notification, setNotification] = useState(null);
+  //load cart from local storage if available or set empty cart
+  const [cart, setCart] = useState(() => {
+    const storedCart = localStorage.getItem("cart");
+    return storedCart ? JSON.parse(storedCart) : [];
+  });
 
+  //load logged in state from locatStorage
+  const [isLoggedIn, setIsLoggedIn] = useState(() => {
+    return localStorage.getItem("isLoggedIn") === "true";
+  });
+  // Save cart to localStorage when cart changes
+  useEffect(() => {
+    return localStorage.setItem("cart", JSON.stringify(cart));
+  });
+  // Save login state when user logs in/out
+  useEffect(() => {
+    localStorage.setItem("isLoggedIn", isLoggedIn);
+  }, [isLoggedIn]);
+  //cart count
   const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
 
   const debouncedSetNotification = useCallback(() => {
@@ -80,6 +97,26 @@ export const ContextProvider = ({ children }) => {
     setCart((prevCart) => prevCart.filter((item) => item.id !== product.id));
   };
 
+  // Login function
+  const login = (email, password) => {
+    const hardcodedEmail = "admin@example.com";
+    const hardcodedPassword = "password123";
+
+    if (email === hardcodedEmail && password === hardcodedPassword) {
+        localStorage.setItem("isLoggedIn", "true");
+      setIsLoggedIn(true);
+      return true; // Success
+    }
+    return false; // Failure
+  };
+
+  // Logout function
+  const logout = () => {
+    setIsLoggedIn(false);
+    localStorage.removeItem("isLoggedIn");
+      setIsLoggedIn(false);
+  };
+
   return (
     <StateContext.Provider
       value={{
@@ -95,6 +132,9 @@ export const ContextProvider = ({ children }) => {
         notification,
         updateCartQuantity,
         cartCount,
+        isLoggedIn,
+        login,
+        logout,
       }}>
       {children}
     </StateContext.Provider>

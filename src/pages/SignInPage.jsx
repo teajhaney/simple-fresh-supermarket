@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import { useStateContext } from "../contexts/useStateContext";
 import { NavLink } from "react-router-dom";
 
 import { motion } from "framer-motion";
@@ -14,7 +14,7 @@ import {
 
 const SignInPage = () => {
   const navigate = useNavigate();
-
+  const { login } = useStateContext();
   // State for form fields and validation errors
   const [formData, setFormData] = useState({
     email: "",
@@ -62,9 +62,12 @@ const SignInPage = () => {
   // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (validateForm()) {
-      // console.log("Login successful:", formData);
-      navigate("/"); // Redirect to the next page
+    if (!validateForm()) return;
+    if (login(formData.email, formData.password)) {
+      localStorage.setItem("isLoggedIn", "true");
+      navigate("/"); // Redirect to the home page
+    } else {
+      setErrors({ ...errors, password: "Invalid email or password" });
     }
   };
   return (
