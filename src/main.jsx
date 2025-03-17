@@ -17,7 +17,7 @@ import { ContextProvider } from "./contexts/ContextProvider";
 import { Layout } from "./components/export_components.jsx";
 //
 const router = createBrowserRouter([
-  // { path: "/", element: <HomePage />, errorElement: <NotFoundPage /> },
+
   {
     element: <Layout />,
     children: [
