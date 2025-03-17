@@ -4,10 +4,10 @@ import { IoMdMenu } from "react-icons/io";
 import { RxCross2 } from "react-icons/rx";
 import { CiSearch, CiShoppingCart, CiUser } from "react-icons/ci";
 import { useEffect } from "react";
-import { accounts, categories, shops } from "../constants";
+import { accounts, categories, shops, gorceryProducts } from "../constants";
 import { CgMenuGridR } from "react-icons/cg";
 import { OptionMenu } from "./export_components";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useStateContext } from "../contexts/useStateContext";
 
 //code
@@ -22,7 +22,7 @@ const NavigationBar = () => {
   const [departmentSelected, setDepartmentSelected] =
     useState("All Departments");
   const departmentRef = useRef(null);
-
+  const searchDropdownRef = useRef(null);
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (
@@ -41,6 +41,51 @@ const NavigationBar = () => {
       window.removeEventListener("mousedown", handleClickOutside);
     };
   }, [isDepartmentOpen]);
+  //search query and state
+  const [searchQuery, setSearchQuery] = useState("");
+  const [filteredProducts, setFilteredProducts] = useState([]);
+  const [searchDropdown, setSearchDropdown] = useState(false);
+  const navigate = useNavigate();
+  //click outside search driopdown
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        searchDropdownRef &&
+        !searchDropdownRef.current.contains(event.target)
+      ) {
+        setSearchDropdown(false);
+      }
+    };
+    if (searchDropdown) {
+      window.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      window.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [searchDropdown]);
+
+  //handle input change
+  const handleSearchInputChange = (e) => {
+    e.stopPropagation();
+    const query = e.target.value.toLowerCase();
+    setSearchQuery(query);
+    if (query.length >= 0) {
+      const filtered = gorceryProducts.filter((gorceryProduct) =>
+        gorceryProduct.productName.toLowerCase().includes(query)
+      );
+      setFilteredProducts(filtered);
+      setSearchDropdown(true);
+    } else {
+      setFilteredProducts([]);
+      setSearchDropdown(false);
+    }
+  };
+  const handleProductSearchSelection = (product) => {
+    setSearchQuery("");
+    setSearchDropdown(false);
+    navigate("/products-details-page", { state: { product } });
+  };
 
   return (
     <nav className=" flex flex-col gap-3 lg:pb-5  border-b-2 border-b-accents">
@@ -71,13 +116,41 @@ const NavigationBar = () => {
             </NavLink>
           </div>
           {/* search */}
-          <input
-            type="search"
-            name="search"
-            id="search"
-            className="w-200  h-10 hidden lg:flex rounded-sm border-2 text-secondary outline-primary px-3 text-lg    border-accents"
-            placeholder="Search"
-          />
+          <div className="relative">
+            <input
+              type="text"
+              name="search"
+              id="search"
+              value={searchQuery}
+              onChange={handleSearchInputChange}
+              placeholder="Search for products..."
+              className="w-200  h-10 hidden lg:flex rounded-sm border-2 text-secondary outline-primary px-3 text-lg  border-accents"
+            />
+            {searchDropdown && filteredProducts.length > 0 && (
+              <ul
+                ref={searchDropdownRef}
+                className="absolute bg-white  shadow-lg rounded w-200 h-100 overflow-auto z-10">
+                {filteredProducts.map((filteredProduct) => (
+                  <li
+                    key={filteredProduct.id}
+                    className="m-2 text-secondary hover:bg-grayed cursor-pointer"
+                    onClick={() =>
+                      handleProductSearchSelection(filteredProduct)
+                    }>
+                    <div className="gap-5 flex items-center">
+                      <img
+                        className="h-10 w-10"
+                        src={filteredProduct.productImage}
+                        alt={filteredProduct.productName}
+                      />
+                      <p className="text-sm"> {filteredProduct.productName}</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+
           {/* right icons */}
         </div>
         <div className="flex items-center gap-2 text-2xl">
@@ -169,3 +242,31 @@ const NavigationBar = () => {
 };
 
 export default NavigationBar;
+
+// //search query and state management
+// const [searchQuery, setSearchQuery] = useState("");
+// const [filteredProducts, setFilteredProducts] = useState([]);
+// const [searchDropdown, setSearchDropdown] = useState(false);
+
+// const handleSearchChange = (e) => {
+//   const query = e.target.value.toLowerCase();
+//   setSearchQuery(query);
+
+//   if (query.length > 0) {
+//     const filtered = gorceryProducts.filter((gorceryProduct) =>
+//       gorceryProduct.productName.toLowerCase().includes(query)
+//     );
+//     setFilteredProducts(filtered);
+//     setSearchDropdown(true); //shows dropdown if result exist
+//   } else {
+//     setFilteredProducts([]);
+//     setSearchDropdown(false);
+//   }
+// };
+// const navigate = useNavigate();
+
+// const handleProductSelect = (product) => {
+//   setSearchDropdown(false); // Hide dropdown
+//   setSearchQuery(""); // Clear search input
+//   navigate("/products-details-page", { state: { product } }); // Navigate to product details page
+// };
