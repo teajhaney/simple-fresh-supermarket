@@ -14,6 +14,9 @@ const CheckoutPage = () => {
   const handleProductClick = (product) => {
     navigate("/products-details-page", { state: { product } });
   };
+  const handleCheckOut= () => {
+    navigate("/payment-page", { state: { cart } });
+  };
   return (
     <div className="bodyContent p-5 ">
       {cart.length === 0 ? (
@@ -46,7 +49,7 @@ const CheckoutPage = () => {
           <div className="space-y-5">
             {cart.map((item) => (
               <div
-                onClick={()=>handleProductClick(item)}
+                onClick={() => handleProductClick(item)}
                 key={item.id}
                 className="flex items-center justify-between gap-4 border-b border-b-accents pb-3 cursor-pointer">
                 <div className="flex gap-4">
@@ -85,6 +88,7 @@ const CheckoutPage = () => {
             <ButtonComponent
               className="bg-primary  mt-5 "
               text="Complete order"
+              onClick={() => handleCheckOut()}
             />
           </div>
         </div>

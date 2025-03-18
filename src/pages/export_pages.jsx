@@ -7,3 +7,4 @@ export { default as SignUpPage } from "./SignUpPage.jsx";
 export { default as NotFoundPage } from "./NotFoundPage.jsx";
 export { default as ProductDetailsPage } from "./ProductDetailsPage.jsx";
 export { default as CheckOuTPage } from "./CheckOuTPage.jsx";
+export { default as PaymentPage } from "./PaymentPage.jsx";

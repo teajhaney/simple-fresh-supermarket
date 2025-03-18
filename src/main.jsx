@@ -12,12 +12,12 @@ import {
   NotFoundPage,
   ProductDetailsPage,
   CheckOuTPage,
+  PaymentPage
 } from "./pages/export_pages.jsx";
 import { ContextProvider } from "./contexts/ContextProvider";
 import { Layout } from "./components/export_components.jsx";
 //
 const router = createBrowserRouter([
-
   {
     element: <Layout />,
     children: [
@@ -29,6 +29,7 @@ const router = createBrowserRouter([
       { path: "/sign-in", element: <SignInPage /> },
       { path: "/sign-up", element: <SignUpPage /> },
       { path: "/checkout-page", element: <CheckOuTPage /> },
+      { path: "/payment-page", element: <PaymentPage /> },
     ],
   },
 ]);
