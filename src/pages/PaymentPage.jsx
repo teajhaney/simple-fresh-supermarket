@@ -57,7 +57,7 @@ const PaymentPage = () => {
           0
         );
         const totalPriceNGN = totalPriceUSD * exchangeRate;
-        setAmount(Math.round(totalPriceNGN * 100)); // Convert to kobo
+        setAmount(Math.round(totalPriceNGN)); // Convert to kobo
       } catch (e) {
         console.log("Payment failed:", e);
       }
@@ -92,7 +92,7 @@ const PaymentPage = () => {
           type="text"
           placeholder="Amount"
           className={style.input}
-          value={`₦${(amount / 100).toFixed(2)}`}
+          value={`₦${(amount).toFixed(2)}`}
           readOnly
         />
         <input
