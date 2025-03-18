@@ -92,7 +92,7 @@ const PaymentPage = () => {
           type="text"
           placeholder="Amount"
           className={style.input}
-          value={`₦${(amount / 100).toFixed(2)}`}
+          value={`₦ ${(amount / 100).toFixed(2)}`}
           readOnly
         />
         <input
