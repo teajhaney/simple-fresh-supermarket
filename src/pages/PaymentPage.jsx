@@ -38,7 +38,7 @@ const PaymentPage = () => {
       phone,
     },
     ...config,
-    text: "Pay with paystackk",
+    text: "Pay with paystack",
     onSuccess: (reference) => handleSuccess(reference),
     onClose: handleCloseAction,
   };
