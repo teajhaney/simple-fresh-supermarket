@@ -505,7 +505,7 @@ export const productListVariantsYbottom = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }, // Slide in smoothly
 };
 export const productListVariantsYtop = {
-  hidden: { opacity: 0, y: 50 }, // Start hidden with opacity 0, slightly to the right
+  hidden: { opacity: 0, y: -50 }, // Start hidden with opacity 0, slightly to the right
   visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }, // Slide in smoothly
 };
 
