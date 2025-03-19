@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import { PaystackButton } from "react-paystack";
 import axios from "axios";
 import { IoConstructSharp } from "react-icons/io5";
+import { ClipLoader } from "react-spinners";
 
 const config = {
   reference: new Date().getTime().toString(),
@@ -20,6 +21,7 @@ const PaymentPage = () => {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [amount, setAmount] = useState(0);
+  const [loading, setLoading] = useState(true);
 
   const handleSuccess = (reference) => {
     return alert("Payment succesful:", reference);
@@ -46,6 +48,7 @@ const PaymentPage = () => {
   // Calculate total price
   useEffect(() => {
     const fetchExchangeRate = async () => {
+      setLoading(true);
       try {
         const response = await axios.get(
           "https://v6.exchangerate-api.com/v6/a5150d4ec9b865c31fdb36f2/latest/USD"
@@ -60,6 +63,8 @@ const PaymentPage = () => {
         setAmount(Math.round(totalPriceNGN * 100)); // Convert to kobo
       } catch (e) {
         console.log("Payment failed:", e);
+      } finally {
+        setLoading(false);
       }
     };
     fetchExchangeRate();
@@ -74,6 +79,11 @@ const PaymentPage = () => {
 
   return (
     <div className=" bodyContent my-20 flex flex-col items-center">
+      {loading && (
+        <div className="absolute inset-0 bg-white bg-opacity-10 flex flex-col justify-center items-center z-50">
+          <ClipLoader size={50} color="#3B28CC" />
+        </div>
+      )}
       <p>Make ypur payment here</p>
       <div className="w-96 mx-auto my-4">
         <input
