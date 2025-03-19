@@ -78,7 +78,7 @@ const PaymentPage = () => {
   };
 
   return (
-    <div className=" bodyContent my-20 flex flex-col items-center">
+    <div className="relative bodyContent my-20 flex flex-col items-center">
       {loading && (
         <div className="absolute inset-0 bg-white bg-opacity-10 flex flex-col justify-center items-center z-50">
           <ClipLoader size={50} color="#3B28CC" />
