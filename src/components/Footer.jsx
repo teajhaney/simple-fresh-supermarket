@@ -142,6 +142,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
+        <a className="text-sm text-tertiary text-center hover:underline hover:decoration-primary hover:text-primary" href="https://github.com/teajhaney" target="_blank" rel="noreferrer"> Github @teajhaney</a>
       </div>
     </footer>
   );
